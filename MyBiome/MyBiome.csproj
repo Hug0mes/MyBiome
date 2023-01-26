@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-MyBiome-d4fd726b-9cb8-4841-a14b-907d6fee9e27</UserSecretsId>
+    <SonarQubeTestProject>True</SonarQubeTestProject>
   </PropertyGroup>
 
   <ItemGroup>

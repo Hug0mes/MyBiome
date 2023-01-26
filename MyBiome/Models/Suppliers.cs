@@ -2,8 +2,22 @@
 {
         public class Suppliers
         {
-                public long Id { get; set; }
-                public string Name { get; set; }
-                public string Slug { get; set; }
+            public long Id { get; set; }
+
+            public string CompanyName { get; set; }
+
+            public string ContactName { get; set; }
+
+            public string ContactEmail { get; set; }
+
+            public string phone { get; set; }
+
+            public string StreetAddress { get; set; } 
+
+            public string City { get; set; }
+
+            public string State { get; set; }
+
+            public string PostalCode { get; set; }
         }
 }
