@@ -8,8 +8,8 @@ namespace MyBiome.Infrastructure
         {
                 public DataContext(DbContextOptions<DataContext> options) : base(options)
                 { }
-              
-        public DbSet<Category> Categories { get; set; }
+
+		public DbSet<Category> Categories { get; set; }
 
         public DbSet<Employees> Employees { get; set; }
 

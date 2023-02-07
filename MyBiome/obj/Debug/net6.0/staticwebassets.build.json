@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "24A4Dab6WcyImnYitTVa2LUhWHCpscunh1YJGuL0UUE=",
+  "Hash": "OuqUwlRfqHAtW+stK5H6Xc7oovRFjKeQ+RtV2JWesmY=",
   "Source": "MyBiome",
   "BasePath": "_content/MyBiome",
   "Mode": "Default",
@@ -1698,6 +1698,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\fonts\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\icon.png",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icon.png"
     },
     {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_1.jpg",

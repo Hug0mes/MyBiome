@@ -153,6 +153,10 @@
       "PackagePath": "staticwebassets\\fonts\\index.html"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\icon.png",
+      "PackagePath": "staticwebassets\\icon.png"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover.jpg",
       "PackagePath": "staticwebassets\\images\\PlantCover.jpg"
     },
