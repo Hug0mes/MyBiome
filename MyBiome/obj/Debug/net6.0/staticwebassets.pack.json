@@ -1,731 +1,731 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyBiome.bundle.scp.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyBiome.bundle.scp.css",
       "PackagePath": "staticwebassets\\MyBiome.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\_mixins.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\_mixins.css",
       "PackagePath": "staticwebassets\\css\\_mixins.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\_site-blocks.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\_site-blocks.css",
       "PackagePath": "staticwebassets\\css\\_site-blocks.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\animate.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\animate.min.css",
       "PackagePath": "staticwebassets\\css\\animate.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\aos.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\aos.css",
       "PackagePath": "staticwebassets\\css\\aos.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\bootstrap-datepicker.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\bootstrap-datepicker.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-datepicker.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\index.html",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\index.html",
       "PackagePath": "staticwebassets\\css\\index.html"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\jquery.fancybox.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\jquery.fancybox.min.css",
       "PackagePath": "staticwebassets\\css\\jquery.fancybox.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\mixins\\_background-variant.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\mixins\\_background-variant.css",
       "PackagePath": "staticwebassets\\css\\mixins\\_background-variant.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\mixins\\_visibility.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\mixins\\_visibility.css",
       "PackagePath": "staticwebassets\\css\\mixins\\_visibility.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\owl.carousel.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\owl.theme.default.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\css\\owl.theme.default.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\backup.txt",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\backup.txt",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\backup.txt"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.eot",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.eot",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\Flaticon.eot"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.svg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.svg",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\Flaticon.svg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.ttf",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.ttf",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\Flaticon.ttf"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.woff",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.woff",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\Flaticon.woff"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.woff2",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\Flaticon.woff2",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\Flaticon.woff2"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\_flaticon.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\_flaticon.css",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\_flaticon.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\_flaticon.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\_flaticon.scss",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\_flaticon.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\flaticon.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\flaticon.css",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\flaticon.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\flaticon.html",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\font\\flaticon.html",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\font\\flaticon.html"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\license\\license.pdf",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\flaticon\\license\\license.pdf",
       "PackagePath": "staticwebassets\\fonts\\flaticon\\license\\license.pdf"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\Read Me.txt",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\Read Me.txt"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\demo.html",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\demo.html",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\demo.html"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.eot"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.svg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.ttf"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.woff"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\selection.json",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\selection.json",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\selection.json"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\style.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\icomoon\\style.css",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\fonts\\index.html",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\fonts\\index.html",
       "PackagePath": "staticwebassets\\fonts\\index.html"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover.jpg",
       "PackagePath": "staticwebassets\\images\\PlantCover.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover2.png",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover2.png",
       "PackagePath": "staticwebassets\\images\\PlantCover2.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_1.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_1.jpg",
       "PackagePath": "staticwebassets\\images\\cloth_1.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_2.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_2.jpg",
       "PackagePath": "staticwebassets\\images\\cloth_2.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_3.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_3.jpg",
       "PackagePath": "staticwebassets\\images\\cloth_3.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_1.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\gal_1.jpg",
       "PackagePath": "staticwebassets\\images\\gal_1.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_2.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\gal_2.jpg",
       "PackagePath": "staticwebassets\\images\\gal_2.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_3.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\gal_3.jpg",
       "PackagePath": "staticwebassets\\images\\gal_3.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_4.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\gal_4.jpg",
       "PackagePath": "staticwebassets\\images\\gal_4.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_5.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\gal_5.jpg",
       "PackagePath": "staticwebassets\\images\\gal_5.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_6.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\gal_6.jpg",
       "PackagePath": "staticwebassets\\images\\gal_6.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-2-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-2-min.jpg",
       "PackagePath": "staticwebassets\\images\\hero-slider-2-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-3-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-3-min.jpg",
       "PackagePath": "staticwebassets\\images\\hero-slider-3-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-4-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-4-min.jpg",
       "PackagePath": "staticwebassets\\images\\hero-slider-4-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-black.png",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-black.png",
       "PackagePath": "staticwebassets\\images\\icons\\logo-black.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-color.png",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-color.png",
       "PackagePath": "staticwebassets\\images\\icons\\logo-color.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-no-background.png",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-no-background.png",
       "PackagePath": "staticwebassets\\images\\icons\\logo-no-background.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-white.png",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-white.png",
       "PackagePath": "staticwebassets\\images\\icons\\logo-white.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\person_1.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\person_1.jpg",
       "PackagePath": "staticwebassets\\images\\person_1.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\person_2.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\person_2.jpg",
       "PackagePath": "staticwebassets\\images\\person_2.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\person_3.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\person_3.jpg",
       "PackagePath": "staticwebassets\\images\\person_3.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\person_4.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\person_4.jpg",
       "PackagePath": "staticwebassets\\images\\person_4.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\bottoms-1-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\bottoms-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\bottoms-1-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\jacket-1-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\jacket-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\jacket-1-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\shoe-1-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\shoe-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\shoe-1-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sock-1-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sock-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\sock-1-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sweater-1-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sweater-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\sweater-1-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sweater-2-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sweater-2-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\sweater-2-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\watch-1-min.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\products\\watch-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\watch-1-min.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_1.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_1.jpg",
       "PackagePath": "staticwebassets\\images\\shoe_1.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_2.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_2.jpg",
       "PackagePath": "staticwebassets\\images\\shoe_2.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\watch_1.jpg",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\images\\watch_1.jpg",
       "PackagePath": "staticwebassets\\images\\watch_1.jpg"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\aos.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\aos.js",
       "PackagePath": "staticwebassets\\js\\aos.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\bootstrap-datepicker.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\bootstrap-datepicker.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap-datepicker.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\custom.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\index.html",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\index.html",
       "PackagePath": "staticwebassets\\js\\index.html"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jarallax.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\jarallax.min.js",
       "PackagePath": "staticwebassets\\js\\jarallax.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jquery-3.4.1.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\jquery-3.4.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-3.4.1.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.animateNumber.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.animateNumber.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.animateNumber.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.fancybox.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.fancybox.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.fancybox.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.sticky.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.sticky.js",
       "PackagePath": "staticwebassets\\js\\jquery.sticky.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.waypoints.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.waypoints.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.waypoints.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\owl.carousel.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\popper.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\js\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_functions.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_functions.scss",
       "PackagePath": "staticwebassets\\scss\\_functions.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_mixins.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\scss\\_mixins.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-base.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-base.scss",
       "PackagePath": "staticwebassets\\scss\\_site-base.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-blocks.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-blocks.scss",
       "PackagePath": "staticwebassets\\scss\\_site-blocks.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-elements.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-elements.scss",
       "PackagePath": "staticwebassets\\scss\\_site-elements.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-footer.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-footer.scss",
       "PackagePath": "staticwebassets\\scss\\_site-footer.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-navbar.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_site-navbar.scss",
       "PackagePath": "staticwebassets\\scss\\_site-navbar.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_variables.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\scss\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\index.html",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\index.html",
       "PackagePath": "staticwebassets\\scss\\index.html"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_alert.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_alert.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_alert.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_background-variant.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_background-variant.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_background-variant.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_badge.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_badge.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_badge.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_border-radius.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_border-radius.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_border-radius.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_box-shadow.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_box-shadow.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_box-shadow.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_breakpoints.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_breakpoints.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_breakpoints.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_buttons.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_buttons.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_caret.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_caret.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_caret.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_clearfix.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_clearfix.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_clearfix.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_deprecate.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_deprecate.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_deprecate.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_float.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_float.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_float.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_forms.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_forms.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_forms.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_gradients.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_gradients.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_gradients.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_grid-framework.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_grid-framework.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_grid-framework.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_grid.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_grid.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_grid.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_hover.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_hover.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_hover.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_image.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_image.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_image.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_list-group.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_list-group.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_list-group.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_lists.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_lists.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_lists.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_nav-divider.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_nav-divider.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_nav-divider.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_pagination.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_pagination.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_reset-text.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_reset-text.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_reset-text.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_resize.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_resize.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_resize.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_screen-reader.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_screen-reader.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_screen-reader.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_size.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_size.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_size.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_table-row.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_table-row.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_table-row.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_text-emphasis.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_text-emphasis.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_text-emphasis.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_text-hide.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_text-hide.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_text-hide.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_text-truncate.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_text-truncate.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_text-truncate.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_transition.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_transition.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_transition.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_visibility.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\mixins\\_visibility.scss",
       "PackagePath": "staticwebassets\\scss\\mixins\\_visibility.scss"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\style.scss",
+      "Id": "C:\\Users\\120612\\Source\\Repos\\MyBiome\\MyBiome\\wwwroot\\scss\\style.scss",
       "PackagePath": "staticwebassets\\scss\\style.scss"
     },
     {
