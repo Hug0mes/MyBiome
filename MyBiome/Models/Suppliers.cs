@@ -1,7 +1,10 @@
-﻿namespace MyBiome.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MyBiome.Models
 {
         public class Suppliers
         {
+            [Key] 
             public long Id { get; set; }
 
             public string CompanyName { get; set; }
@@ -19,5 +22,7 @@
             public string State { get; set; }
 
             public string PostalCode { get; set; }
+
+            
         }
 }

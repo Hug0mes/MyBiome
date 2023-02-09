@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyBiome.Models
 {
@@ -9,7 +10,7 @@ namespace MyBiome.Models
 		public long Id { get; set; }
 
 		[ForeignKey("AppUser")]
-		public long UserId { get; set; }
+		public string UserId { get; set; }
 
 		public string Name { get; set; }
 
