@@ -5,7 +5,7 @@ namespace MyBiome.Models
 {
         public class Favorites
         {
-
+         
                 [Key]
                 public long Id { get; set; }
 

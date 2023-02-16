@@ -5,11 +5,11 @@ namespace MyBiome.Models
 {
         public class Customers
         {
-                [Key]
+                [Key] 
                 public long Id { get; set; }
 
-		        [ForeignKey("AppUser")]
-		        public string UserId { get; set; }
+                public string UserId { get; set; }
+                public AppUser AppUser { get; set; }
 
 		        public string FirstName { get; set; }
 
@@ -25,7 +25,6 @@ namespace MyBiome.Models
 
                 public int phone { get; set; }
 
-		        public AppUser AppUser { get; set; }
 
                 public Orders Orders { get; set; }
 	}

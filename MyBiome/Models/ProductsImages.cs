@@ -14,7 +14,7 @@ namespace MyBiome.Models
 		public long ProductId { get; set; }
 
         public string Image { get; set; } = "noimage.png";
-
+         
         public int mumber { get; set; }
 
         [NotMapped]

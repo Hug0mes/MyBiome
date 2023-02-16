@@ -6,8 +6,7 @@ namespace MyBiome.Models
         {
 		// public string Occupation { get; set; }
 	
-
-		public Employees Employees { get; set; }
-		public Customers Customers { get; set; }
+		//public Employees Employees { get; set; }
+		//public Customers Customers { get; set; }
 	}
 }

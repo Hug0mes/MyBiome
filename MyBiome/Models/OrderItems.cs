@@ -12,7 +12,7 @@ namespace MyBiome.Models
 		    [ForeignKey("Orders")]
 		    public long OrderId { get; set; }
 
-
+         
 		    [ForeignKey("ProductSize")]
 		    public long ProductSizeId { get; set; }
 

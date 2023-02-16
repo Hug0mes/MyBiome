@@ -14,7 +14,7 @@ namespace MyBiome.Models
                 public decimal Price { get; set; }
 
                 public int stock { get; set; }
-
+         
                 public OrderItems OrderItems { get; set; }
                 public Products Products { get; set; }
     }

@@ -10,7 +10,7 @@ namespace MyBiome.Models
                 public string CompanyName { get; set; }
 
                 public decimal price { get; set; }
-
+         
                 public string phone { get; set;}
 
                 public Orders Orders { get; set; }

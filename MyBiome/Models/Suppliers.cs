@@ -8,7 +8,7 @@ namespace MyBiome.Models
             public long Id { get; set; }
 
             public string CompanyName { get; set; }
-
+         
             public string ContactName { get; set; }
 
             public string ContactEmail { get; set; }

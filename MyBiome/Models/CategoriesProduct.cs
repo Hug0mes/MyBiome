@@ -19,6 +19,6 @@ namespace MyBiome.Models
 
 		public Products Products { get; set; }
 		public Category Category { get; set; }
-
+		 
 	}
 }

@@ -24,7 +24,6 @@ namespace MyBiome.Models
                         ProductName = product.Name;
                         Price = product.Price;
                         Quantity = 1;
-                    
                 }
 
         }

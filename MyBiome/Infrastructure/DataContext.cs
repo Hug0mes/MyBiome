@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;    
 using MyBiome.Models;
 
 namespace MyBiome.Infrastructure
@@ -24,8 +24,6 @@ namespace MyBiome.Infrastructure
         public DbSet<ProductSize> ProductSize { get; set; }
 
         public DbSet<CategoriesProduct> CategoriesProduct { get; set; }
-
-        public DbSet<Category> Category { get; set; }
 
         public DbSet<Suppliers> Suppliers { get; set; }
 

@@ -9,6 +9,10 @@ namespace MyBiome.Models
                 public string Name { get; set; }
                 
                 public CategoriesProduct CategoriesProduct { get; set; }
-                
+
+        internal static bool CategoryExists(long id)
+        {
+            throw new NotImplementedException();
         }
+    }
 }

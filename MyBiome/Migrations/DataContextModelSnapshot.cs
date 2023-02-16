@@ -8,10 +8,10 @@ using MyBiome.Infrastructure;
 
 #nullable disable
 
-namespace MyBiome.Data.Migrations
+namespace MyBiome.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class DataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -271,6 +271,9 @@ namespace MyBiome.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -297,15 +300,14 @@ namespace MyBiome.Data.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("phone")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Customers");
                 });
@@ -317,6 +319,9 @@ namespace MyBiome.Data.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -332,12 +337,11 @@ namespace MyBiome.Data.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Employees");
                 });
@@ -654,10 +658,8 @@ namespace MyBiome.Data.Migrations
             modelBuilder.Entity("MyBiome.Models.Customers", b =>
                 {
                     b.HasOne("MyBiome.Models.AppUser", "AppUser")
-                        .WithOne("Customers")
-                        .HasForeignKey("MyBiome.Models.Customers", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
 
                     b.Navigation("AppUser");
                 });
@@ -665,10 +667,8 @@ namespace MyBiome.Data.Migrations
             modelBuilder.Entity("MyBiome.Models.Employees", b =>
                 {
                     b.HasOne("MyBiome.Models.AppUser", "AppUser")
-                        .WithOne("Employees")
-                        .HasForeignKey("MyBiome.Models.Employees", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
 
                     b.Navigation("AppUser");
                 });
@@ -701,7 +701,7 @@ namespace MyBiome.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("MyBiome.Models.ProductSize", "ProductSize")
-                        .WithOne("orderItems")
+                        .WithOne("OrderItems")
                         .HasForeignKey("MyBiome.Models.OrderItems", "ProductSizeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -763,15 +763,6 @@ namespace MyBiome.Data.Migrations
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("MyBiome.Models.AppUser", b =>
-                {
-                    b.Navigation("Customers")
-                        .IsRequired();
-
-                    b.Navigation("Employees")
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("MyBiome.Models.CategoriesProduct", b =>
                 {
                     b.Navigation("Products")
@@ -807,7 +798,7 @@ namespace MyBiome.Data.Migrations
 
             modelBuilder.Entity("MyBiome.Models.ProductSize", b =>
                 {
-                    b.Navigation("orderItems")
+                    b.Navigation("OrderItems")
                         .IsRequired();
                 });
 

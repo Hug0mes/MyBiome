@@ -17,7 +17,7 @@ namespace MyBiome.Models
 
 		[ForeignKey("Shippers")]
 		public long ShipperId { get; set; }
-
+         
         public int TotalAmount { get; set; }
 
         public string OrderStatus { get; set; }
