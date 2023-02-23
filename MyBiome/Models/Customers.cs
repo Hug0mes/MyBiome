@@ -6,7 +6,7 @@ namespace MyBiome.Models
         public class Customers
         {
                 [Key] 
-                public long Id { get; set; }
+                public int Id { get; set; }
 
                 public string UserId { get; set; }
                 public AppUser AppUser { get; set; }

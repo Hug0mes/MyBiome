@@ -8,10 +8,10 @@ namespace MyBiome.Models
         public class ProductsImages
         {
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
 		[ForeignKey("Products")]
-		public long ProductId { get; set; }
+		public int ProductId { get; set; }
 
         public string Image { get; set; } = "noimage.png";
          

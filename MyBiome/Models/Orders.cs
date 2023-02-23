@@ -8,15 +8,15 @@ namespace MyBiome.Models
         {
 
         [System.ComponentModel.DataAnnotations.Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
 		[ForeignKey("Customers")]
-		public long CustomersId { get; set; }
+		public int CustomersId { get; set; }
 
         public string OrderDate { get; set; }
 
 		[ForeignKey("Shippers")]
-		public long ShipperId { get; set; }
+		public int ShipperId { get; set; }
          
         public int TotalAmount { get; set; }
 

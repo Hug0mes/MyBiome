@@ -8,11 +8,11 @@ namespace MyBiome.Models
         {
 		
         [System.ComponentModel.DataAnnotations.Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         
 		[ForeignKey("Category")]
-		public long CategoryId { get; set; }
+		public int CategoryId { get; set; }
 		
 		[ForeignKey("Product")]
 		public int ProductId { get; set; }

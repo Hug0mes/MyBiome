@@ -5,7 +5,7 @@ namespace MyBiome.Models
         public class Suppliers
         {
             [Key] 
-            public long Id { get; set; }
+            public int Id { get; set; }
 
             public string CompanyName { get; set; }
          

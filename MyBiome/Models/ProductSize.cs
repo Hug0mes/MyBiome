@@ -6,10 +6,10 @@ namespace MyBiome.Models
         public class ProductSize
     {
                 [Key]
-                public long Id { get; set; }
+                public int Id { get; set; }
 
 		        [ForeignKey("Products")]
-		        public long ProductID { get; set; }
+		        public int ProductID { get; set; }
 
                 public decimal Price { get; set; }
 

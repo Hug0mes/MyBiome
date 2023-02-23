@@ -7,13 +7,13 @@ namespace MyBiome.Models
         {
          
                 [Key]
-                public long Id { get; set; }
+                public int Id { get; set; }
 
 		        [ForeignKey("Costumer")]
-		        public long CostumerId { get; set; }
+		        public int CostumerId { get; set; }
 
 		        [ForeignKey("ProductSize")]
-		        public long ProductSizeId { get; set; }
+		        public int ProductSizeId { get; set; }
        
                 public Customers Customers { get; set; }
                 public ProductSize productSize { get; set; }
