@@ -3,18 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyBiome.Models
 {
-        public class Category
-        {
-                [Key]
-                public int Id { get; set; }
-                public string Name { get; set; }
+    public class Category
+    {
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string? Image { get; set; }
+        public List<Products>? Products { get; set; }
 
-        [ValidateNever]
-                public CategoriesProduct CategoriesProduct { get; set; }
-
-        internal static bool CategoryExists(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public List<SubCategory>? SubCategories { get; set; }
     }
 }

@@ -21,9 +21,7 @@ namespace MyBiome.Infrastructure
 
         public DbSet<Products> Products { get; set; }
 
-        public DbSet<ProductSize> ProductSize { get; set; }
-
-        public DbSet<CategoriesProduct> CategoriesProduct { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
 
         public DbSet<Suppliers> Suppliers { get; set; }
 
@@ -31,7 +29,6 @@ namespace MyBiome.Infrastructure
 
         public DbSet<Favorites> Favorites { get; set; }
 
-        public DbSet<ProductsImages> ProductsImages { get; set; }
 
     }
 }

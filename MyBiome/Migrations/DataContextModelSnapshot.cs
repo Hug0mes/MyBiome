@@ -220,33 +220,6 @@ namespace MyBiome.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("MyBiome.Models.CategoriesProduct", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId")
-                        .IsUnique();
-
-                    b.HasIndex("ProductsId");
-
-                    b.ToTable("CategoriesProduct");
-                });
-
             modelBuilder.Entity("MyBiome.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -254,6 +227,9 @@ namespace MyBiome.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -361,14 +337,12 @@ namespace MyBiome.Migrations
                     b.Property<int>("CustomersId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductSizeId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomersId");
-
-                    b.HasIndex("ProductSizeId");
 
                     b.ToTable("Favorites");
                 });
@@ -387,7 +361,10 @@ namespace MyBiome.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(8,2)");
 
-                    b.Property<int>("ProductSizeId")
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductsId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -398,8 +375,7 @@ namespace MyBiome.Migrations
                     b.HasIndex("OrderId")
                         .IsUnique();
 
-                    b.HasIndex("ProductSizeId")
-                        .IsUnique();
+                    b.HasIndex("ProductsId");
 
                     b.ToTable("OrderItems");
                 });
@@ -448,7 +424,26 @@ namespace MyBiome.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Height")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image3")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -463,60 +458,22 @@ namespace MyBiome.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("MyBiome.Models.ProductsImages", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Image")
+                    b.Property<string>("Stock")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int>("SubCategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("mumber")
-                        .HasColumnType("int");
+                    b.Property<string>("Whidh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId")
-                        .IsUnique();
+                    b.HasIndex("CategoryId");
 
-                    b.ToTable("ProductsImages");
-                });
-
-            modelBuilder.Entity("MyBiome.Models.ProductSize", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("stock")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductID")
-                        .IsUnique();
-
-                    b.ToTable("ProductSize");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("MyBiome.Models.Shippers", b =>
@@ -541,6 +498,28 @@ namespace MyBiome.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Shippers");
+                });
+
+            modelBuilder.Entity("MyBiome.Models.SubCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("SubCategories");
                 });
 
             modelBuilder.Entity("MyBiome.Models.Suppliers", b =>
@@ -639,25 +618,6 @@ namespace MyBiome.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MyBiome.Models.CategoriesProduct", b =>
-                {
-                    b.HasOne("MyBiome.Models.Category", "Category")
-                        .WithOne("CategoriesProduct")
-                        .HasForeignKey("MyBiome.Models.CategoriesProduct", "CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MyBiome.Models.Products", "Products")
-                        .WithMany("CategoriesProducts")
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Products");
-                });
-
             modelBuilder.Entity("MyBiome.Models.Customers", b =>
                 {
                     b.HasOne("MyBiome.Models.AppUser", "AppUser")
@@ -684,15 +644,7 @@ namespace MyBiome.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MyBiome.Models.ProductSize", "productSize")
-                        .WithMany()
-                        .HasForeignKey("ProductSizeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Customers");
-
-                    b.Navigation("productSize");
                 });
 
             modelBuilder.Entity("MyBiome.Models.OrderItems", b =>
@@ -703,15 +655,15 @@ namespace MyBiome.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MyBiome.Models.ProductSize", "ProductSize")
-                        .WithOne("OrderItems")
-                        .HasForeignKey("MyBiome.Models.OrderItems", "ProductSizeId")
+                    b.HasOne("MyBiome.Models.Products", "Products")
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Orders");
 
-                    b.Navigation("ProductSize");
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("MyBiome.Models.Orders", b =>
@@ -733,32 +685,33 @@ namespace MyBiome.Migrations
                     b.Navigation("Shippers");
                 });
 
-            modelBuilder.Entity("MyBiome.Models.ProductsImages", b =>
+            modelBuilder.Entity("MyBiome.Models.Products", b =>
                 {
-                    b.HasOne("MyBiome.Models.Products", "Products")
-                        .WithOne("ProductsImages")
-                        .HasForeignKey("MyBiome.Models.ProductsImages", "ProductId")
+                    b.HasOne("MyBiome.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Products");
+                    b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("MyBiome.Models.ProductSize", b =>
+            modelBuilder.Entity("MyBiome.Models.SubCategory", b =>
                 {
-                    b.HasOne("MyBiome.Models.Products", "Products")
-                        .WithOne("ProductSize")
-                        .HasForeignKey("MyBiome.Models.ProductSize", "ProductID")
+                    b.HasOne("MyBiome.Models.Category", "Category")
+                        .WithMany("SubCategories")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Products");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("MyBiome.Models.Category", b =>
                 {
-                    b.Navigation("CategoriesProduct")
-                        .IsRequired();
+                    b.Navigation("Products");
+
+                    b.Navigation("SubCategories");
                 });
 
             modelBuilder.Entity("MyBiome.Models.Customers", b =>
@@ -768,23 +721,6 @@ namespace MyBiome.Migrations
                 });
 
             modelBuilder.Entity("MyBiome.Models.Orders", b =>
-                {
-                    b.Navigation("OrderItems")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("MyBiome.Models.Products", b =>
-                {
-                    b.Navigation("CategoriesProducts");
-
-                    b.Navigation("ProductSize")
-                        .IsRequired();
-
-                    b.Navigation("ProductsImages")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("MyBiome.Models.ProductSize", b =>
                 {
                     b.Navigation("OrderItems")
                         .IsRequired();

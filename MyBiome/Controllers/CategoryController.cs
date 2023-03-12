@@ -4,16 +4,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
+using NToastNotify;
+using MyBiome.Infrastructure.Components;
 
 namespace YourNamespace.Controllers
 {
     public class CategoryController : Controller
     {
         private readonly DataContext _context;
+        private readonly IWebHostEnvironment _appEnvironment;
+        private readonly IToastNotification _toastNotification;
+        private readonly string _imageFolder;
 
-        public CategoryController(DataContext context)
+        public CategoryController(DataContext context, IWebHostEnvironment appEnvironment, IToastNotification toastNotification)
         {
             _context = context;
+            _appEnvironment = appEnvironment;
+            _toastNotification = toastNotification;
+            _imageFolder = Path.Combine(_appEnvironment.WebRootPath, "images\\categories");
         }
 
         //GET: Category
@@ -51,17 +59,18 @@ namespace YourNamespace.Controllers
         // POST: Category/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Category category)
+        public async Task<IActionResult> Create(CategoryViewModel categoryVM)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
-                await _context.SaveChangesAsync();
+                await SaveCategorie(categoryVM);
+                _toastNotification.AddSuccessToastMessage($"Category {categoryVM.Category.Name} was insert sucessfuly");
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(categoryVM);
         }
 
+    
         // GET: Category/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -145,6 +154,70 @@ namespace YourNamespace.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-       
+        private async Task<bool> SaveCategorie(CategoryViewModel CategoriesVM)
+        {
+            try
+            {
+                // File included?
+                string uniqueFileName = UploadedFile(CategoriesVM);
+                if ((uniqueFileName != null) || (CategoriesVM.RemoverImagem))
+                {
+                    // Previous image?
+                    if (CategoriesVM.Category.Image != null)
+                    {
+                        // remove file
+                        string filePath = Path.Combine(_imageFolder, CategoriesVM.Category.Image);
+                        System.IO.File.Delete(filePath);
+
+                    }
+                    // Set filename image in Artigo
+                    CategoriesVM.Category.Image = uniqueFileName;
+                }
+
+                // Save Categories
+                if (CategoriesVM.Category.Id == 0)
+                {
+                    //_context.Entry(Categories.Categories).State = EntityState.Added;
+                    _context.Add(CategoriesVM.Category);
+                }
+                else
+                {
+                    //_context.Entry(Categories.Categories).State = EntityState.Modified;
+                    _context.Update(CategoriesVM.Category);
+                }
+                // Store everything in db
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                // TODO: Handle failure
+                return false;
+            }
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //}
+        }
+
+        private string UploadedFile(CategoryViewModel CategoriesVM)
+        {
+            string uniqueFileName = null;
+
+            if (CategoriesVM.ImageFile != null)
+            {
+                System.IO.Directory.CreateDirectory(_imageFolder);
+                uniqueFileName = Guid.NewGuid().ToString()
+                        + "_"
+                        + System.IO.Path.GetFileName(CategoriesVM.ImageFile.FileName);
+                string filePath = Path.Combine(_imageFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    CategoriesVM.ImageFile.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
+        }
+
     }
 }

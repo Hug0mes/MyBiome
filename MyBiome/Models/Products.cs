@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using MyBiome.Infrastructure.Validation;
 
 namespace MyBiome.Models
 {
@@ -22,9 +23,32 @@ namespace MyBiome.Models
 
         public string Status { get; set; }
 
-		public ICollection<CategoriesProduct> CategoriesProducts { get; set; }
-		public ProductsImages ProductsImages { get; set; }
-        public ProductSize ProductSize { get; set; }
+        public string Height { get; set; }
+
+        public string Whidh { get; set; }
+
+        public string Stock { get; set; }
+
+        public string Image1 { get; set; } = "noimage.png";
+
+        public string Image2 { get; set; } = "noimage.png";
+
+        public string Image3 { get; set; } = "noimage.png";
+
+        public int CategoryId { get; set; }
+
+        public int SubCategoryId { get; set; }
+
+        public SubCategory? SubCategory { get; set; }
+
+        public Category? Category { get; set; }
+
+        [NotMapped]
+        public List<Category> Categories { get; set; }
+
+
+        [NotMapped]
+        public List<SubCategory> SubCategories { get; set; }
 
     }
 }

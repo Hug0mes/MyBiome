@@ -1,0 +1,43 @@
+﻿@model List<SubCategory>
+
+    <div style=" padding: 40px;
+      margin-top: 40px;">
+
+    <h1>Subcategories</h1>
+
+    <p>
+        <a asp-action="Create">Create new sub-category</a>
+    </p>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var subCategory in Model)
+                {
+                    <tr>
+                        <td>@subCategory.Name</td>
+                        <td>@(subCategory.Category != null ? subCategory.Category.Name : "-")</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@subCategory.Id">Edit</a> |
+                            <a asp-action="Delete" asp-route-id="@subCategory.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No subcategories found.</p>
+    }
+
+
+</div>

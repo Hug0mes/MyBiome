@@ -12,11 +12,11 @@ namespace MyBiome.Models
 		        [ForeignKey("Costumer")]
 		        public int CostumerId { get; set; }
 
-		        [ForeignKey("ProductSize")]
-		        public int ProductSizeId { get; set; }
+		         [ForeignKey("Product")]
+		        public int ProductId { get; set; }
        
                 public Customers Customers { get; set; }
-                public ProductSize productSize { get; set; }
+               
 
         }
 }

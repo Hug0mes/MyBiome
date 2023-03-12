@@ -13,8 +13,8 @@ namespace MyBiome.Models
 		    public int OrderId { get; set; }
 
          
-		    [ForeignKey("ProductSize")]
-		    public int ProductSizeId { get; set; }
+		     [ForeignKey("Product")]
+		    public int ProductId { get; set; }
 
             public int Quantity { get; set; }
 
@@ -24,7 +24,7 @@ namespace MyBiome.Models
             public decimal Price { get; set; }
 
             public Orders Orders { get; set; }
-            public ProductSize ProductSize { get; set; }
+            public Products Products { get; set; }
             
     }
 }
