@@ -11,7 +11,6 @@ namespace MyBiome.Models
         public IFormFile ImageFile2 { get; set; }
         public IFormFile ImageFile3 { get; set; }
 
-        public List<int> CategoriesSelected { get; set; }
         public bool RemoverImagem { get; set; }
         
     }

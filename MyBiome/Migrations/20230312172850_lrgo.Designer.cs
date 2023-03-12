@@ -12,8 +12,8 @@ using MyBiome.Infrastructure;
 namespace MyBiome.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230309231836_humm")]
-    partial class humm
+    [Migration("20230312172850_lrgo")]
+    partial class lrgo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -426,7 +426,7 @@ namespace MyBiome.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -474,6 +474,8 @@ namespace MyBiome.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("SubCategoryId");
 
                     b.ToTable("Products");
                 });
@@ -689,13 +691,17 @@ namespace MyBiome.Migrations
 
             modelBuilder.Entity("MyBiome.Models.Products", b =>
                 {
-                    b.HasOne("MyBiome.Models.Category", "Category")
+                    b.HasOne("MyBiome.Models.Category", null)
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("MyBiome.Models.SubCategory", "SubCategory")
+                        .WithMany()
+                        .HasForeignKey("SubCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("SubCategory");
                 });
 
             modelBuilder.Entity("MyBiome.Models.SubCategory", b =>

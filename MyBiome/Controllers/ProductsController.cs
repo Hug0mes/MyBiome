@@ -26,12 +26,10 @@ namespace MyBiome.Controllers
 
 
         // GET: Products
-     
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            ViewBag.Categories = _context.Categories.ToList();
-            ViewBag.SubCategories = new Dictionary<int, List<SubCategory>>();
-            return View();
+            List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
+            return View(products);
         }
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -59,14 +57,9 @@ namespace MyBiome.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            var categories = _context.Categories.ToList();
-            var subCategories = _context.SubCategories.ToList();
-            var products = new Products
-            {
-                Categories = categories,
-                SubCategories = subCategories
-            };
-            return View(new ProductsViewModel { });
+            IEnumerable<SelectListItem> scatList = DBHelper.FillSubCategories(_context);
+            ViewBag.scatList = scatList;
+            return View();
         }
 
         // POST: Products/Create
@@ -77,12 +70,9 @@ namespace MyBiome.Controllers
            
             if (ModelState.IsValid)
             {
-                
-              
+
                 await SaveProduct(ProductsVM);
-
                 _toastNotification.AddSuccessToastMessage($"Products {ProductsVM.Products.Name} Insert successfully");
-
                 _context.SaveChanges();
 
 
@@ -245,6 +235,8 @@ namespace MyBiome.Controllers
                     //_context.Entry(Products.Products).State = EntityState.Modified;
                     _context.Update(ProductsVM.Products);
                 }
+               
+               
                 // Store everything in db
                 await _context.SaveChangesAsync();
 

@@ -35,20 +35,13 @@ namespace MyBiome.Models
 
         public string Image3 { get; set; } = "noimage.png";
 
-        public int CategoryId { get; set; }
-
+    
         public int SubCategoryId { get; set; }
 
         public SubCategory? SubCategory { get; set; }
 
-        public Category? Category { get; set; }
-
         [NotMapped]
-        public List<Category> Categories { get; set; }
-
-
-        [NotMapped]
-        public List<SubCategory> SubCategories { get; set; }
+        public List<SubCategory>? SubCategories { get; set; }
 
     }
 }

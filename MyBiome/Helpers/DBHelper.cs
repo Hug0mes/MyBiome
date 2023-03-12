@@ -8,7 +8,7 @@ using MyBiome.Infrastructure;
 using MyBiome.Models.ViewModels;
 
 namespace MyBiome.Helpers
-{
+{ 
     public class DBHelper
     {
 
@@ -25,6 +25,21 @@ namespace MyBiome.Helpers
                         Text = c.Name
                     }).ToList();
             return listaCategories;
+        }
+
+        static public IEnumerable<SelectListItem> FillSubCategories(DataContext context)
+        {
+            //https://www.c-sharpcorner.com/article/different-ways-bind-the-value-to-razor-dropdownlist-in-aspnet-mvc5/
+            // Fill SubCategorias List
+            IEnumerable<SelectListItem> listSubCategories = context.SubCategories
+            .OrderBy(c => c.Name)
+            .Select(c =>
+                new SelectListItem
+                {
+                    Value = Convert.ToString(c.Id),
+                    Text = c.Name
+                }).ToList();
+            return listSubCategories;
         }
     }
 }

@@ -63,7 +63,7 @@ namespace MyBiome.Controllers
             if (ModelState.IsValid)
             {
                 await SaveSubCat(subCategory);
-                _toastNotification.AddSuccessToastMessage($"Sub-Category {subCategory.Name} was insert sucessfuly");
+                _toastNotification.AddSuccessToastMessage($"SubCategory {subCategory.Name} was insert sucessfuly");
                 return RedirectToAction(nameof(Index));
             }
             return View(subCategory);
@@ -78,12 +78,7 @@ namespace MyBiome.Controllers
             }
             catch (DbUpdateException ex)
             {
-                // Handle exceptions here
-                // You can log the exception and/or show an error message to the user
-                // For example, if the subCategory.CategoryId value does not exist in the Category table, 
-                // it will throw a DbUpdateException
-                // You can catch the exception and handle it as you see fit
-                // Here's an example of how to log the exception:
+              
                 Console.WriteLine(ex);
                 // Here's an example of how to show an error message to the user:
                 ModelState.AddModelError("", "Error saving sub-category. Please try again later.");

@@ -1,4 +1,7 @@
-﻿@model IEnumerable<MyBiome.Models.Products>
+﻿@model List<Products>
+
+<div style=" padding: 40px;
+      margin-top: 40px;">
 
 <h2>Products</h2>
 
@@ -11,40 +14,51 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
+
+                <th>Name</th>
+                <th>Image1</th>
+                <th>Price</th>
+                <th>Height</th>
+                <th>Whidh<th>
+                <th>Category</th>
+                <th>SubCategory</th>
+                <th>Status</th>
+                <th>Action</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var products in Model)
+            {
+                <tr>
+                    <td>@products.Name</td>
+                    <td>
+                            <img style="  background-size: cover;" src=@ImageHelper.GetImageLink(products.Image1, "products") class="rounded" height="80" width="80" asp-append-version="true" />
+                    </td>
+                    <td>@products.Price</td>
+                    <td>@products.Height</td>
+                    <td>@products.Whidh</td>
+                    <td>@products.SubCategory?.Category?.Name</td>
+                    <td>@products.SubCategory?.Name</td>
+                    <td>@products.Status</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@products.Id">Details</a> |
+                        <a asp-action="Edit" asp-route-id="@products.Id">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@products.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No subcategories found.</p>
+}
+
+ </div>    
