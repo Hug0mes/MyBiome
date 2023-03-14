@@ -1,10 +1,40 @@
-﻿@model MyBiome.Models.Category
+﻿@model MyBiome.Models.Products
 
 @{
     ViewData["Title"] = "Details";
 }
 <div style=" padding: 40px;
   margin-top: 40px;">
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src=@ImageHelper.GetImageLink(Model.Image1, "products") alt="" class="img-fluid">
+				<div class="row mt-3">
+					<div class="col-md-4">
+						<img src=@ImageHelper.GetImageLink(Model.Image1, "products") alt="" class="img-fluid">
+					</div>
+					<div class="col-md-4">
+						<img src=@ImageHelper.GetImageLink(Model.Image2, "products") alt="" class="img-fluid">
+					</div>
+					<div class="col-md-4">
+						<img src=@ImageHelper.GetImageLink(Model.Image3, "products") alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 product-info">
+				<h2> @Html.DisplayFor(model => model.Name)</h2>
+				<h3 class="text-muted">@Model. > @Html.DisplayFor(model => model.Name)</h3>
+				<p class="description"> @Html.DisplayFor(model => model.Description)</p>
+				<p class="price"> @Html.DisplayFor(model => model.Price)€ </p>
+				<button class="btn btn-primary" onclick="addToCart(@Model.Id)">Adicionar ao carrinho</button>
+				<button class="btn btn-success" onclick="buyNow(@Model.Id)">Comprar agora</button>
+			</div>
+		</div>
+	</div>
+
+
 
 <h1>Details</h1>
 

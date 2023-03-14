@@ -31,6 +31,14 @@ namespace MyBiome.Controllers
             List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
             return View(products);
         }
+
+        // GET: Products1
+        public IActionResult ListProducts()
+        {
+            List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
+            return View(products);
+        }
+
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {

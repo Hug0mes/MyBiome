@@ -23,6 +23,17 @@ body {
     opacity: 1;
     visibility: visible; }
 
+select option {
+    color: #6c757d;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+select option:hover {
+    background-color: #f8f9fa;
+}
+
 .text-black {
   color: #000000 !important; }
 
