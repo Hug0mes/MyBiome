@@ -21,7 +21,7 @@ namespace MyBiome.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Add(long id)
+        public async Task<IActionResult> Add(int id)
         {
             Products product = await _context.Products.FindAsync(id);
 

@@ -18,6 +18,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options => options.SignIn.Re
     .AddDefaultTokenProviders()
     .AddDefaultUI();
 
+// Add services to the container.
+builder.Services.AddRazorPages();
+
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddMvc().AddNToastNotifyToastr(new ToastrOptions()
@@ -26,6 +30,17 @@ builder.Services.AddMvc().AddNToastNotifyToastr(new ToastrOptions()
     PositionClass = ToastPositions.BottomCenter
 }
 );
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequiredLength = 4;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireDigit = false;
+
+    options.User.RequireUniqueEmail = true;
+});
 
 var app = builder.Build();
 
@@ -53,5 +68,15 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+using (var scope = scopeFactory.CreateScope())
+{
+    //    var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<DataContext>();
+    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+    await SeedData.SeedDatabase(context, userManager, roleManager);
+}
 
 app.Run();
