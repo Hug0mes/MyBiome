@@ -12,6 +12,11 @@ namespace MyBiome.Models
         public IFormFile ImageFile3 { get; set; }
 
         public bool RemoverImagem { get; set; }
-        
+
+        public List<Products> ProductsList { get; set; }
+        public List<Category> Categories { get; set; }
+        public List<SubCategory> subCategories { get; set; }
+
+
     }
 }

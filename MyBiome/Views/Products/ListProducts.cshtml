@@ -41,13 +41,23 @@
 
                 <div class="col-md-3">
                     <ul class="list-unstyled categories">
-                        <li><a href="#">New <span>2,919</span></a></li>
-                        <li><a href="#">Men <span>5,381</span></a></li>
-                        <li><a href="#">Women <span>7,119</span></a></li>
-                        <li><a href="#">Jewelries <span>1,012</span></a></li>
-                        <li><a href="#">Accessories <span>919</span></a></li>
-                        <li><a href="#">Shoes <span>4,344</span></a></li>
-                        <li><a href="#">Clothing <span>7,919</span></a></li>
+
+                          @if (Model != null && Model.Any())
+                        {
+                            @foreach (var products in Model)
+                            {
+
+                         <li><a href="#">  <span>2,919</span></a></li>
+                              
+                            }
+                        }
+                        else
+                        {
+                            <p>No products found.</p>
+                        }
+
+                     
+                    
                     </ul>
                 </div>
               
@@ -60,14 +70,26 @@
 
                                 <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
                                     <div class="product-item">
+                                    <div class="label new top-right" style="background-color:transparent;">
+
+                                        <div class="content" style=" transform: rotate(90deg); ">
+
+                                            <a asp-controller="Cart" asp-action="Add" asp-route-id="@products.Id"> <img style="width: 19px; height: 19px; opacity:0.8;  box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.5);;" src="~/images/icons/cart.png"></img></a>
+                                            <img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img>
+
+                                        </div>  
+                                    </div>
                                         <a asp-action="Details" asp-route-id="@products.Id" class="product-img">
+                                        
                                             <div style="width: 240px; height: 240px; display: flex; align-items: center; justify-content: center;">
                                                 <img src="@ImageHelper.GetImageLink(products.Image1, "products")" asp-append-version="true" alt="Image" class="img-fluid" style="max-width: 100%; max-height: 100%;">
                                             </div>
                                         </a>
                                         <h3 class="title"><a href="#">@products.Name</a></h3>
                                         <div class="price">
+
                                             <span>@products.Price €</span>
+                                      
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +97,7 @@
                         }
                         else
                         {
-                            <p>No subcategories found.</p>
+                            <p>No products found.</p>
                         }
                         <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
                             <div class="product-item">

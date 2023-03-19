@@ -257,6 +257,18 @@
       "PackagePath": "staticwebassets\\images\\hero-slider-4-min.jpg"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\cart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\empty_heart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\empty_heart.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\full_heart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\full_heart.png"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-black.png",
       "PackagePath": "staticwebassets\\images\\icons\\logo-black.png"
     },
