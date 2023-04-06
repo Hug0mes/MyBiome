@@ -13,9 +13,9 @@ namespace MyBiome.Models
 
         public bool RemoverImagem { get; set; }
 
-        public List<Products> ProductsList { get; set; }
-        public List<Category> Categories { get; set; }
-        public List<SubCategory> subCategories { get; set; }
+        public List<Products>? ProductsList { get; set; }
+        public List<Category>? Categories { get; set; }
+        public List<SubCategory>? subCategories { get; set; }
 
 
     }

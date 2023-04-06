@@ -28,28 +28,16 @@
 				<h3 class="text-muted">@Model. > @Html.DisplayFor(model => model.Name)</h3>
 				<p class="description"> @Html.DisplayFor(model => model.Description)</p>
 				<p class="price"> @Html.DisplayFor(model => model.Price)€ </p>
-				<button class="btn btn-primary" onclick="addToCart(@Model.Id)">Adicionar ao carrinho</button>
-				<button class="btn btn-success" onclick="buyNow(@Model.Id)">Comprar agora</button>
+				<a class="btn btn-primary btn-sm" asp-controller="Cart" asp-action="Add"  asp-route-id="@Model.Id" >Add to cart</a>
+				  <form method="post" action="@Url.Action("Add", "Cart")">
+					<input type="hidden" name="productId" asp-route-id="@Model.Id" />
+                        <input type="submit" value="Add to cart" />
+                    </form>
+				<button class="btn btn-success" onclick="buyNow(@Model.Id)">Buy now</button>
 			</div>
 		</div>
 	</div>
 
-
-
-<h1>Details</h1>
-
-<div>
-    <h4>Categoria</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-    </dl>
-</div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

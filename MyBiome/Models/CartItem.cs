@@ -16,6 +16,7 @@ namespace MyBiome.Models
 
                 public CartItem()
                 {
+
                 }
 
                 public CartItem(Products product)

@@ -73,7 +73,7 @@ namespace MyBiome.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ProductsViewModel ProductsVM)
+        public async Task<IActionResult> Create( ProductsViewModel ProductsVM)
         {
            
             if (ModelState.IsValid)

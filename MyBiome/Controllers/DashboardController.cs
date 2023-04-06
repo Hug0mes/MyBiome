@@ -11,5 +11,10 @@ namespace MyBiome.Controllers
         {
             return View();
         }
+
+        public ActionResult PartialView()
+        {
+            return PartialView();
+        }
     }
 }

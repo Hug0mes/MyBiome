@@ -12,8 +12,8 @@ using MyBiome.Infrastructure;
 namespace MyBiome.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230312172850_lrgo")]
-    partial class lrgo
+    [Migration("20230324220749_baka")]
+    partial class baka
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MyBiome.Migrations
 {
-    public partial class lrgo : Migration
+    public partial class baka : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

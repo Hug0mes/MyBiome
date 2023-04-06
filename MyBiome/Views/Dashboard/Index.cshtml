@@ -19,7 +19,7 @@
 
         <div class="row align-items-center mb-5">
             <div class="col-lg-8">
-                <h2 class="mb-3 mb-lg-0" > Dashboard </h2>
+                <h2 class="mb-3 mb-lg-0" > @User.Identity.Name </h2>
             </div>
             @*<div class="col-lg-4">
             <div class="d-flex sort align-items-center justify-content-lg-end">
@@ -41,22 +41,25 @@
 
             <div class="col-md-2">
                 <ul class="list-unstyled categories">
-                    <li><a href="#" style="color:#4D7E3E"> Products <span>2,919</span></a></li>
-                    <li><a href="#"> Costumers <span>5,381</span></a></li>
-                    <li><a href="#"> Employees <span>7,119</span></a></li>
-                    <li><a href="#"> Orders <span>1,012</span></a></li>
-                    <li><a href="#"> Categories <span>7,919</span></a></li>
-                    <li><a href="#"> Shippers <span>919</span></a></li>
-                    <li><a href="#"> Supliers <span>4,344</span></a></li>
-
+                    <li><a href="#" style="color:#4D7E3E"> Favorites</a></li>
+                    <li><a href="#"> My Orders </a></li>
+                    <li><a href="#"> Account Settings </a></li>
+                    <li><a href="#" class="load-home"> Log Out </a></li>
                 </ul>
             </div>
-            <div class="col-md-9">
-                @*   Conteudo*@
-
-                <p>lauren ipslun aksjajsbdabsd </p>
-
-                @* Fim do Conteudo*@
+            <div class="col-md-9" id="content">
+               
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.load-home').click(function (e) {
+                e.preventDefault();
+                $.get('@Url.Action("Index", "Home")', function (data) {
+                    $('#content').html(data);
+                });
+            });
+        });
+    </script>
