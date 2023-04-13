@@ -9,14 +9,14 @@ namespace MyBiome.Models
                 [Key]
                 public int Id { get; set; }
 
-		        [ForeignKey("Costumer")]
+		       
 		        public int CostumerId { get; set; }
 
-		         [ForeignKey("Product")]
+		     
 		        public int ProductId { get; set; }
        
-                public Customers Customers { get; set; }
-               
+                public AppUser? AppUser { get; set; }
+                public Products? Products { get; set; }
 
         }
 }

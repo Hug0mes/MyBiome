@@ -331,18 +331,23 @@ namespace MyBiome.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CostumerId")
-                        .HasColumnType("int");
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("CustomersId")
+                    b.Property<int>("CostumerId")
                         .HasColumnType("int");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ProductsId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomersId");
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductsId");
 
                     b.ToTable("Favorites");
                 });
@@ -640,13 +645,17 @@ namespace MyBiome.Migrations
 
             modelBuilder.Entity("MyBiome.Models.Favorites", b =>
                 {
-                    b.HasOne("MyBiome.Models.Customers", "Customers")
+                    b.HasOne("MyBiome.Models.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("CustomersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AppUserId");
 
-                    b.Navigation("Customers");
+                    b.HasOne("MyBiome.Models.Products", "Products")
+                        .WithMany()
+                        .HasForeignKey("ProductsId");
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("MyBiome.Models.OrderItems", b =>

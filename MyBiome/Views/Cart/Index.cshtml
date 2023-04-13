@@ -49,23 +49,23 @@
                                   
                                 </td>
                                 <td class="product-name">
-                                    <h2 class="h5 text-black"> @item.ProductName </h2>
+                                            <h2 asp-controller="Products" asp-action="details" asp-route-id="@item.ProductId" class="h5 text-black"> @item.ProductName </h2>
                                 </td>
                                 <td>@item.Price €</td>
                                 <td>
                                     <div class="input-group mb-3" style="max-width: 120px;">
                                         <div class="input-group-prepend">
-                                            <button class="btn btn-outline-black js-btn-minus" type="button">&minus;</button>
+                                            <a asp-action="Decrease" asp-route-id="@item.ProductId" class="btn btn-outline-black js-btn-minus">-</a>
                                         </div>
                                         <input type="text" class="form-control text-center" value="@item.Quantity" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-black js-btn-plus" type="button">&plus;</button>
+                                            <a  asp-action="add" asp-route-id="@item.ProductId" class="btn btn-outline-black js-btn-plus">+</a>
                                         </div>
                                     </div>
 
                                 </td>
                                 <td>@item.Total €</td>
-                                <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                                        <td><a asp-action="Remove" asp-route-id="@item.ProductId" class="btn btn-black btn-sm">X</a></td>
                             </tr>
                                 }
                         
@@ -87,6 +87,7 @@
                     <div class="col-md-6 mb-3 mb-md-0">
                         <button class="btn btn-black btn-sm btn-block">Update Cart</button>
                     </div>
+                  
                     <div class="col-md-6">
                         <a href="@Url.Action("ListProducts", "Products")" class="btn btn-outline-black btn-sm btn-block">Continue Shopping</a>
 
