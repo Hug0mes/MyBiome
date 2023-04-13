@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CartViewModel
+
+@{
     ViewData["Title"] = "Cart";
 }
 
@@ -21,6 +23,10 @@
         <div class="row mb-5">
             <form class="col-md-12" method="post">
                 <div class="site-blocks-table">
+
+                    
+        @if (Model.CartItems.Count > 0)
+        {
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -33,55 +39,44 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                               @foreach (var item in Model.CartItems)
+                {
                             <tr>
-                                <td class="product-thumbnail">
-                                    <img src="images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
+                                 <td class="product-thumbnail">
+                                  
+                                        <img src="@ImageHelper.GetImageLink(item.Image, "products")" asp-append-version="true" alt="Image" class="img-fluid" style="max-height:150px">
+                                  
                                 </td>
                                 <td class="product-name">
-                                    <h2 class="h5 text-black">Top Up T-Shirt</h2>
+                                            <h2 asp-controller="Products" asp-action="details" asp-route-id="@item.ProductId" class="h5 text-black"> @item.ProductName </h2>
                                 </td>
-                                <td>$49.00</td>
+                                <td>@item.Price €</td>
                                 <td>
                                     <div class="input-group mb-3" style="max-width: 120px;">
                                         <div class="input-group-prepend">
-                                            <button class="btn btn-outline-black js-btn-minus" type="button">&minus;</button>
+                                            <a asp-action="Decrease" asp-route-id="@item.ProductId" class="btn btn-outline-black js-btn-minus">-</a>
                                         </div>
-                                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                        <input type="text" class="form-control text-center" value="@item.Quantity" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-black js-btn-plus" type="button">&plus;</button>
+                                            <a  asp-action="add" asp-route-id="@item.ProductId" class="btn btn-outline-black js-btn-plus">+</a>
                                         </div>
                                     </div>
 
                                 </td>
-                                <td>$49.00</td>
-                                <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                                <td>@item.Total €</td>
+                                        <td><a asp-action="Remove" asp-route-id="@item.ProductId" class="btn btn-black btn-sm">X</a></td>
                             </tr>
-
-                            <tr>
-                                <td class="product-thumbnail">
-                                    <img src="images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
-                                </td>
-                                <td class="product-name">
-                                    <h2 class="h5 text-black">Polo Shirt</h2>
-                                </td>
-                                <td>$49.00</td>
-                                <td>
-                                    <div class="input-group mb-3" style="max-width: 120px;">
-                                        <div class="input-group-prepend">
-                                            <button class="btn btn-outline-black js-btn-minus" type="button">&minus;</button>
-                                        </div>
-                                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-black js-btn-plus" type="button">&plus;</button>
-                                        </div>
-                                    </div>
-
-                                </td>
-                                <td>$49.00</td>
-                                <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                            </tr>
+                                }
+                        
                         </tbody>
                     </table>
+
+                                }
+    else
+    {
+            <h3 class="display-4 text-center">Your cart is empty.</h3>
+    }
                 </div>
             </form>
         </div>
@@ -92,8 +87,10 @@
                     <div class="col-md-6 mb-3 mb-md-0">
                         <button class="btn btn-black btn-sm btn-block">Update Cart</button>
                     </div>
+                  
                     <div class="col-md-6">
-                        <button class="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
+                        <a href="@Url.Action("ListProducts", "Products")" class="btn btn-outline-black btn-sm btn-block">Continue Shopping</a>
+
                     </div>
                 </div>
                 <div class="row">

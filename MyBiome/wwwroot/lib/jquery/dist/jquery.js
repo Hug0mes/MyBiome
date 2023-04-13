@@ -1345,7 +1345,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
 			if ( !el.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
-				rbuggyQSA.push( "~/=" );
+				rbuggyQSA.push( "~=" );
 			}
 
 			// Support: IE 11+, Edge 15 - 18+
@@ -1486,7 +1486,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			return compare;
 		}
 
-		// Calculate position if both inputs belong to the same document
+		// Calculate position if both inputs beint to the same document
 		// Support: IE 11+, Edge 17 - 18+
 		// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 		// two documents; shallow comparisons work.
@@ -1767,7 +1767,7 @@ Expr = Sizzle.selectors = {
 		">": { dir: "parentNode", first: true },
 		" ": { dir: "parentNode" },
 		"+": { dir: "previousSibling", first: true },
-		"~/": { dir: "previousSibling" }
+		"~": { dir: "previousSibling" }
 	},
 
 	preFilter: {
@@ -1778,7 +1778,7 @@ Expr = Sizzle.selectors = {
 			match[ 3 ] = ( match[ 3 ] || match[ 4 ] ||
 				match[ 5 ] || "" ).replace( runescape, funescape );
 
-			if ( match[ 2 ] === "~/=" ) {
+			if ( match[ 2 ] === "~=" ) {
 				match[ 3 ] = " " + match[ 3 ] + " ";
 			}
 
@@ -1901,7 +1901,7 @@ Expr = Sizzle.selectors = {
 					operator === "^=" ? check && result.indexOf( check ) === 0 :
 					operator === "*=" ? check && result.indexOf( check ) > -1 :
 					operator === "$=" ? check && result.slice( -check.length ) === check :
-					operator === "~/=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
+					operator === "~=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
 					operator === "|=" ? result === check || result.slice( 0, check.length + 1 ) === check + "-" :
 					false;
 				/* eslint-enable max-len */
@@ -5372,7 +5372,7 @@ jQuery.event = {
 			}
 		}
 
-		// Remove data and the expando if it's no longer used
+		// Remove data and the expando if it's no inter used
 		if ( jQuery.isEmptyObject( events ) ) {
 			dataPriv.remove( elem, "handle events" );
 		}
@@ -9643,7 +9643,7 @@ jQuery.extend( {
 			return jqXHR.abort();
 		}
 
-		// Aborting is no longer a cancellation
+		// Aborting is no inter a cancellation
 		strAbort = "abort";
 
 		// Install callbacks on deferreds
@@ -9710,7 +9710,7 @@ jQuery.extend( {
 			}
 
 			// Dereference transport for early garbage collection
-			// (no matter how long the jqXHR object will be used)
+			// (no matter how int the jqXHR object will be used)
 			transport = undefined;
 
 			// Cache response headers

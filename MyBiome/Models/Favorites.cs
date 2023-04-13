@@ -1,12 +1,22 @@
-﻿namespace MyBiome.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MyBiome.Models
 {
         public class Favorites
         {
-                public long Id { get; set; }
+         
+                [Key]
+                public int Id { get; set; }
 
-                public long CostumerId { get; set; }
+		       
+		        public int CostumerId { get; set; }
 
-                public long ProductId { get; set; }
+		     
+		        public int ProductId { get; set; }
        
+                public AppUser? AppUser { get; set; }
+                public Products? Products { get; set; }
+
         }
 }

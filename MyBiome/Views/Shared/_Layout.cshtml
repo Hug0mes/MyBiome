@@ -16,6 +16,7 @@
 	<meta name="keywords" content="" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
@@ -77,33 +78,24 @@
 						<li class="has-children">
 							<a href="shop.html">Shop</a>
 							<ul class="dropdown">
-								<li><a href="#">T-Shirt</a></li>
-								<li><a href="#">Underware</a></li>
-								<li><a href="#">Clothing</a></li>
-								<li><a href="#">Watches</a></li>
-								<li><a href="#">Shoes</a></li>
+								<li><a asp-controller="products" asp-action="ListProducts">Se all</a></li>
+								<li><a href="#">Baby's'</a></li>
+								<li><a href="#">Large</a></li>
+								<li><a href="#">Flowering</a></li>
+								<li><a href="#">Foliage</a></li>
+								<li><a href="#">Rare</a></li>
 							</ul>
 						</li>
 						<li class="has-children">
-							<a href="#">Pages</a>
+							<a href="#"> Dashboard </a>
 							<ul class="dropdown">
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="cart.html">Cart</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
+								<li><a href="">Favorites</a></li>
+								<li><a href="">My orders</a></li>
+								<li><a href="">My Info</a></li>
+								<li><a href="">Cart</a></li>
+								<li><a href="">Checkout</a></li>
 								
-								<li class="has-children">
-									<a href="#">Menu Two</a>
-									<ul class="dropdown">
-										<li><a href="#">T-Shirt</a></li>
-										<li><a href="#">Underware</a></li>
-										<li><a href="#">Clothing</a></li>
-										<li><a href="#">Watches</a></li>
-										<li><a href="#">Shoes</a></li>
-
-									</ul>
-								</li>
+							
 								<li><a href="#">Menu Three</a></li>
 								<ul class="dropdown">
 									<li><a href="#">T-Shirt</a></li>
@@ -116,16 +108,15 @@
 							</ul>
 						</li>
 
-						<li><a href="shop.html">Men</a></li>
-						<li><a href="shop.html">C</a></li>
-						
+						<li><a href="shop.html">Blog</a></li>
+					
 					</ul>
 
 
-
+                  
 
 					<div class="menu-icons">
-
+                       
 						<a href="#" class="btn-custom-search" id="btn-search">
 							<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
@@ -133,19 +124,21 @@
 							</svg>
 						</a>
 
-						<a href=""> ddd </a>
-
-						
-
+					@*	<a href="#" class="btn-custom-search" id="btn-search">
+							<p> @Context.User.Identity.Name </p>
+						</a>*@
 					
-							<a asp-area="Identity" asp-page="/Account/Login" class="user-profile">
+							<a asp-controller="Dashboard" asp-action="index" class="user-profile">
 							<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
 							</svg>
 						</a>
-
+						@*@{
+							List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart") ?? new List<CartItem>();
+							int itemCount = cart.Sum(c => c.Quantity);
+						}*@
 						<a asp-controller="cart" asp-action="index" class="cart">
-							<span class="item-in-cart">2</span>
+							<span class="item-in-cart">1914</span>
 							<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
 							</svg>
@@ -234,7 +227,7 @@
 					</ul>
 				</div>
 				<div class="col-12 text-center copyright">
-					<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.
+					<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. MyBiome. All Rights Reserved.
 					</p>
 
 				</div>
@@ -249,6 +242,13 @@
 		</div>
 	</div>
 
+	 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+	
+
 	<script src="~/js/jquery-3.4.1.min.js"></script>
 	<script src="~/js/popper.min.js"></script>
 	<script src="~/js/bootstrap.min.js"></script>
@@ -259,7 +259,10 @@
 	<script src="~/js/jquery.sticky.js"></script>
 	<script src="~/js/aos.js"></script>
 	<script src="~/js/custom.js"></script>
-	@await RenderSectionAsync("Scripts", required: false)
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>

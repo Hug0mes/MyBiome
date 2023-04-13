@@ -1,10 +1,8 @@
-﻿using MyBiome.Models;
-
-namespace MyBiome.Models.ViewModels
+﻿namespace MyBiome.Models.ViewModels
 {
-        public class CartViewModel
-        {
-                public List<CartItem> CartItems { get; set; }
-                public decimal GrandTotal { get; set; }
-        }
+    public class CartViewModel
+    {
+        public List<CartItem> CartItems { get; set; }
+        public decimal GrandTotal { get; set; }
+    }
 }

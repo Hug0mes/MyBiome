@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\2005h\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
+      "PackagePath": "staticwebassets\\noty.js"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
+      "PackagePath": "staticwebassets\\toastr.js"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyBiome.bundle.scp.css",
       "PackagePath": "staticwebassets\\MyBiome.bundle.scp.css"
     },
@@ -165,8 +173,44 @@
       "PackagePath": "staticwebassets\\images\\PlantCover2.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_1.jpg",
-      "PackagePath": "staticwebassets\\images\\cloth_1.jpg"
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\03144a49-8766-493f-84bb-71d214066b82_gal_6.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\03144a49-8766-493f-84bb-71d214066b82_gal_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\1fa89949-5c15-4547-b037-5133e779302a_cloth_3.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\1fa89949-5c15-4547-b037-5133e779302a_cloth_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\3a364771-0177-4e1d-b536-e4ab1ee5cdc1_gal_6.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\3a364771-0177-4e1d-b536-e4ab1ee5cdc1_gal_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\3b8f1548-f70d-4867-8468-7108932490ea_cloth_3.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\3b8f1548-f70d-4867-8468-7108932490ea_cloth_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\6745b5ea-dbce-4cd5-a3b5-72a1a7730723_sock-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\6745b5ea-dbce-4cd5-a3b5-72a1a7730723_sock-1-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\a6fef398-f889-4516-af40-d08b76178a66_person_2.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\a6fef398-f889-4516-af40-d08b76178a66_person_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\ad69681a-ed6b-432a-928f-96cd755a0703_hero-slider-2-min.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\ad69681a-ed6b-432a-928f-96cd755a0703_hero-slider-2-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\cloth_1.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\cloth_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\e1dd305a-d98b-4e3f-a29c-239a8435b52c_cloth_3.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\e1dd305a-d98b-4e3f-a29c-239a8435b52c_cloth_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\fd644971-195e-427b-b993-8b8ff1456ba0_hero-slider-4-min.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\fd644971-195e-427b-b993-8b8ff1456ba0_hero-slider-4-min.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cloth_2.jpg",
@@ -201,6 +245,10 @@
       "PackagePath": "staticwebassets\\images\\gal_6.jpg"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-slider-1-min.jpg"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-2-min.jpg",
       "PackagePath": "staticwebassets\\images\\hero-slider-2-min.jpg"
     },
@@ -211,6 +259,18 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\hero-slider-4-min.jpg",
       "PackagePath": "staticwebassets\\images\\hero-slider-4-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\cart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\empty_heart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\empty_heart.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\full_heart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\full_heart.png"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-black.png",
@@ -245,12 +305,64 @@
       "PackagePath": "staticwebassets\\images\\person_4.jpg"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\19ca7292-bdf9-4624-9147-e863b4e34339_hero-slider-4-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\19ca7292-bdf9-4624-9147-e863b4e34339_hero-slider-4-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\2e074111-17f3-4ec2-af81-c24e2286ae0a_hero-slider-2-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\2e074111-17f3-4ec2-af81-c24e2286ae0a_hero-slider-2-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\2f4a1141-cd03-41ce-bc53-dbeabe873615_sock-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\2f4a1141-cd03-41ce-bc53-dbeabe873615_sock-1-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\2fc48f5e-5062-4307-a3a3-1a2b74385beb_cloth_2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\2fc48f5e-5062-4307-a3a3-1a2b74385beb_cloth_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\3488e002-e0f7-413f-8f06-cd5110d0734a_hero-slider-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\3488e002-e0f7-413f-8f06-cd5110d0734a_hero-slider-1-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\3758acb7-aa14-4d30-b62d-ac9c6b2f6889_gal_3.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\3758acb7-aa14-4d30-b62d-ac9c6b2f6889_gal_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\434bd11b-cf26-418a-b5c5-a39bb7907920_hero-slider-2-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\434bd11b-cf26-418a-b5c5-a39bb7907920_hero-slider-2-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\78ef309f-0d5e-482c-8cda-605dac9901d9_gal_6.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\78ef309f-0d5e-482c-8cda-605dac9901d9_gal_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\7a2c1537-2382-4b10-8b31-580819d63509_gal_6.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\7a2c1537-2382-4b10-8b31-580819d63509_gal_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png",
+      "PackagePath": "staticwebassets\\images\\products\\85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\b3ef2f64-9506-43cf-b3b7-39cd619f8db0_bottoms-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\b3ef2f64-9506-43cf-b3b7-39cd619f8db0_bottoms-1-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\bf361965-5350-4a6d-8578-08065fa379ec_sock-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\bf361965-5350-4a6d-8578-08065fa379ec_sock-1-min.jpg"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\bottoms-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\bottoms-1-min.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\jacket-1-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\jacket-1-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\repeat.png",
+      "PackagePath": "staticwebassets\\images\\products\\repeat.png"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\shoe-1-min.jpg",
@@ -267,10 +379,6 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sweater-2-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\sweater-2-min.jpg"
-    },
-    {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\watch-1-min.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\watch-1-min.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_1.jpg",
@@ -327,6 +435,10 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\jquery.waypoints.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\js\\owl.carousel.min.js",
@@ -521,6 +633,54 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\backup.txt",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\backup.txt"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\Flaticon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\_flaticon.scss"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\flaticon.css",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\font\\flaticon.html",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\font\\flaticon.html"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\flaticon\\license\\license.pdf",
+      "PackagePath": "staticwebassets\\lib\\flaticon\\license\\license.pdf"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -567,6 +727,58 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\scss\\_functions.scss",

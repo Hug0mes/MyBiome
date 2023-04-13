@@ -1,5 +1,64 @@
-﻿@{
-ViewData["Title"] = "Products";
-}
-  
+﻿@model List<Products>
 
+<div style=" padding: 40px;
+      margin-top: 40px;">
+
+<h2>Products</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form method="get">
+    <p>
+        <input type="text" name="searchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Image1</th>
+                <th>Price</th>
+                <th>Height</th>
+                <th>Whidh<th>
+                <th>Category</th>
+                <th>SubCategory</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var products in Model)
+            {
+                <tr>
+                    <td>@products.Name</td>
+                    <td>
+                        <img style="  background-size: cover;" src=@ImageHelper.GetImageLink(products.Image1, "products") class="rounded" height="80" width="80" asp-append-version="true" />
+                    </td>
+                    <td>@products.Price</td>
+                    <td>@products.Height</td>
+                    <td>@products.Whidh</td>
+                    <td>@products.SubCategory?.Category?.Name</td>
+                    <td>@products.SubCategory?.Name</td>
+                    <td>@products.Status</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@products.Id">Details</a> |
+                        <a asp-action="Edit" asp-route-id="@products.Id">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@products.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No subcategories found.</p>
+}
+
+ </div>    

@@ -1,0 +1,55 @@
+﻿@model MyBiome.Models.Suppliers
+
+
+<div style=" padding: 40px;
+  margin-top: 40px;">
+
+<h1>Edit Supplier</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="CompanyName" class="control-label"></label>
+        <input asp-for="CompanyName" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContactName" class="control-label"></label>
+        <input asp-for="ContactName" class="form-control" />
+        <span asp-validation-for="ContactName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContactEmail" class="control-label"></label>
+        <input asp-for="ContactEmail" class="form-control" />
+        <span asp-validation-for="ContactEmail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="phone" class="control-label"></label>
+        <input asp-for="phone" class="form-control" />
+        <span asp-validation-for="phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StreetAddress" class="control-label"></label>
+        <input asp-for="StreetAddress" class="form-control" />
+        <span asp-validation-for="StreetAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="City" class="control-label"></label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="State" class="control-label"></label>
+        <input asp-for="State" class="form-control" />
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PostalCode" class="control-label"></label>
+        <input asp-for="PostalCode" class="form-control" />
+        <span asp-validation-for="PostalCode" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
+</div>

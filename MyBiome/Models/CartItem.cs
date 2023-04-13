@@ -4,7 +4,7 @@ namespace MyBiome.Models
 {
         public class CartItem
         {
-                public long ProductId { get; set; }
+                public int ProductId { get; set; }
                 public string ProductName { get; set; }
                 public int Quantity { get; set; }
                 public decimal Price { get; set; }
@@ -16,6 +16,7 @@ namespace MyBiome.Models
 
                 public CartItem()
                 {
+
                 }
 
                 public CartItem(Products product)
@@ -24,8 +25,8 @@ namespace MyBiome.Models
                         ProductName = product.Name;
                         Price = product.Price;
                         Quantity = 1;
-                    
-                }
+                        Image = product.Image1;
+        }
 
         }
 }

@@ -2020,8 +2020,8 @@
     });
   }
 
-  function effect$2(_ref2) {
-    var state = _ref2.state;
+  function effect$2(_rTabalho_dezembro) {
+    var state = _rTabalho_dezembro.state;
     var initialStyles = {
       popper: {
         position: state.options.strategy,
@@ -2319,9 +2319,9 @@
     state.modifiersData[name] = (_state$modifiersData$ = {}, _state$modifiersData$[axisProp] = offset, _state$modifiersData$.centerOffset = offset - center, _state$modifiersData$);
   }
 
-  function effect$1(_ref2) {
-    var state = _ref2.state,
-        options = _ref2.options;
+  function effect$1(_rTabalho_dezembro) {
+    var state = _rTabalho_dezembro.state,
+        options = _rTabalho_dezembro.options;
     var _options$element = options.element,
         arrowElement = _options$element === void 0 ? '[data-popper-arrow]' : _options$element;
 
@@ -2377,17 +2377,17 @@
     };
   }
 
-  function mapToStyles(_ref2) {
+  function mapToStyles(_rTabalho_dezembro) {
     var _Object$assign2;
 
-    var popper = _ref2.popper,
-        popperRect = _ref2.popperRect,
-        placement = _ref2.placement,
-        offsets = _ref2.offsets,
-        position = _ref2.position,
-        gpuAcceleration = _ref2.gpuAcceleration,
-        adaptive = _ref2.adaptive,
-        roundOffsets = _ref2.roundOffsets;
+    var popper = _rTabalho_dezembro.popper,
+        popperRect = _rTabalho_dezembro.popperRect,
+        placement = _rTabalho_dezembro.placement,
+        offsets = _rTabalho_dezembro.offsets,
+        position = _rTabalho_dezembro.position,
+        gpuAcceleration = _rTabalho_dezembro.gpuAcceleration,
+        adaptive = _rTabalho_dezembro.adaptive,
+        roundOffsets = _rTabalho_dezembro.roundOffsets;
 
     var _ref3 = roundOffsets === true ? roundOffsetsByDPR(offsets) : typeof roundOffsets === 'function' ? roundOffsets(offsets) : offsets,
         _ref3$x = _ref3.x,
@@ -3144,10 +3144,10 @@
     };
   }
 
-  function offset(_ref2) {
-    var state = _ref2.state,
-        options = _ref2.options,
-        name = _ref2.name;
+  function offset(_rTabalho_dezembro) {
+    var state = _rTabalho_dezembro.state,
+        options = _rTabalho_dezembro.options,
+        name = _rTabalho_dezembro.name;
     var _options$offset = options.offset,
         offset = _options$offset === void 0 ? [0, 0] : _options$offset;
     var data = placements.reduce(function (acc, placement) {
@@ -3478,8 +3478,8 @@
     var _generatorOptions = generatorOptions,
         _generatorOptions$def = _generatorOptions.defaultModifiers,
         defaultModifiers = _generatorOptions$def === void 0 ? [] : _generatorOptions$def,
-        _generatorOptions$def2 = _generatorOptions.defaultOptions,
-        defaultOptions = _generatorOptions$def2 === void 0 ? DEFAULT_OPTIONS : _generatorOptions$def2;
+        _generatorOptions$dTabalho_dezembro = _generatorOptions.defaultOptions,
+        defaultOptions = _generatorOptions$dTabalho_dezembro === void 0 ? DEFAULT_OPTIONS : _generatorOptions$dTabalho_dezembro;
     return function createPopper(reference, popper, options) {
       if (options === void 0) {
         options = defaultOptions;
@@ -5174,7 +5174,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-  const uriAttrs = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
+  const uriAttrs = new Set(['background', 'cite', 'href', 'itemtype', 'intdesc', 'poster', 'src', 'xlink:href']);
   const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
   /**
    * A pattern that recognizes a commonly useful subset of URLs that are safe.

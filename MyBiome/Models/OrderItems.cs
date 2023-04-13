@@ -6,11 +6,15 @@ namespace MyBiome.Models
 {
         public class OrderItems
         {
-            public long Id { get; set; }
+            [Key]
+            public int Id { get; set; }
 
-            public long OrderId { get; set; }
+		    [ForeignKey("Orders")]
+		    public int OrderId { get; set; }
 
-            public long ProductSizeId { get; set; }
+         
+		     [ForeignKey("Product")]
+		    public int ProductId { get; set; }
 
             public int Quantity { get; set; }
 
@@ -18,5 +22,9 @@ namespace MyBiome.Models
             [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a value")]
             [Column(TypeName = "decimal(8, 2)")]
             public decimal Price { get; set; }
+
+            public Orders Orders { get; set; }
+            public Products Products { get; set; }
+            
     }
 }
