@@ -1,19 +1,39 @@
-﻿
+﻿@model List<Favorites>
+
+<h2>Meus Favoritos</h2>
+
+
 <div class="container">
     <h1 class="text-center my-5">Produtos Favoritos</h1>
 
     <div class="row">
-        <div class="col-md-4 mb-4">
+
+        @foreach (var favorite in Model)
+        {
+            <li>@favorite.ProductId</li>
+            
+            <div class="col-md-4 mb-4">
             <div class="card">
                 <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Produto 1">
                 <div class="card-body">
-                    <h5 class="card-title">Produto 1</h5>
-                    <p class="card-text">Descrição do Produto 1.</p>
+                        <h5 class="card-title">@favorite.ProductId</h5>
+                        @if (favorite.Products != null)
+                        {
+                            <h5 class="card-title">@favorite.Products.Name</h5>
+                        }
+                        else
+                        {
+                            <p>Produto não encontrado</p>
+                        }
+
+                        <p class="card-text">  @favorite.ProductId </p>
                     <a href="#" class="btn btn-primary">Comprar</a>
                     <a href="#" class="btn btn-danger">Remover</a>
                 </div>
             </div>
         </div>
+        }
+        
 
         <div class="col-md-4 mb-4">
             <div class="card">

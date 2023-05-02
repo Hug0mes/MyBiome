@@ -1,4 +1,4 @@
-﻿@model List<Products>
+﻿@model ProductsViewModel
 
     <div class="page-heading bg-light">
 
@@ -42,12 +42,12 @@
                 <div class="col-md-3">
                     <ul class="list-unstyled categories">
 
-                          @if (Model != null && Model.Any())
+                          @if (Model.Categories != null && Model.Categories.Any())
                         {
-                            @foreach (var products in Model)
+                            @foreach (var category in Model.Categories)
                             {
 
-                         <li><a href="#">  <span>2,919</span></a></li>
+                            <li><a asp-controller="Category" asp-action="edit" asp-route-id="@category.Id"> @category.Name <span> @*numbrrs*@ </span></a></li>
                               
                             }
                         }
@@ -63,9 +63,9 @@
               
                 <div class="col-md-9">
                     <div class="row">
-                        @if (Model != null && Model.Any())
+                        @if (Model.ProductsList != null && Model.ProductsList.Any())
                         {
-                            @foreach (var products in Model)
+                            @foreach (var products in Model.ProductsList)
                             {
 
                                 <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
@@ -75,8 +75,10 @@
                                         <div class="content" style=" transform: rotate(90deg); ">
 
                                             <a asp-controller="Cart" asp-action="Add" asp-route-id="@products.Id"> <img style="width: 19px; height: 19px; opacity:0.8;  box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.5);;" src="~/images/icons/cart.png"></img></a>
-                                            <img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img>
-
+                                            <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
+                              
+                                                
+                                               
                                         </div>  
                                     </div>
                                         <a asp-action="Details" asp-route-id="@products.Id" class="product-img">
@@ -99,97 +101,7 @@
                         {
                             <p>No products found.</p>
                         }
-                        <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-                            <div class="product-item">
-                                <a href="shop-single.html" class="product-img">
-
-                                    <div class="label new top-right">
-                                        <div class='content'>New</div>
-                                    </div>
-
-
-                                    <img src="~/images/products/85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png" alt="Image" class="img-fluid">
-                                </a>
-                                <h3 class="title"><a href="#">Dark Jacket</a></h3>
-                                <div class="price">
-                                    <span>£69.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-                            <div class="product-item">
-                                <a href="shop-single.html" class="product-img">
-                                    <div class="label new top-right">
-                                        <div class='content'>New</div>
-                                    </div>
-
-                                    <div class="label sale top-right second">
-                                        <div class='content'>Sale</div>
-                                    </div>
-                                    <img src="~/images/products/85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png" alt="Image" class="img-fluid">
-                                </a>
-                                <h3 class="title"><a href="#">Chino Bottoms</a></h3>
-                                <div class="price">
-                                    <del>£99.00</del> &mdash; <span>£69.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-                            <div class="product-item">
-                                <a href="shop-single.html" class="product-img">
-                                    <img src="~/images/products/85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png" alt="Image" class="img-fluid">
-                                </a>
-                                <h3 class="title"><a href="#">Brown Shoe</a></h3>
-                                <div class="price">
-                                    <span>£29.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-                            <div class="product-item">
-                                <a href="shop-single.html" class="product-img">
-                                    <img src="~/images/products/85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png" alt="Image" class="img-fluid">
-                                     <i class="far fa-heart"></i>
-                                </a>
-                                <h3 class="title"><a href="#">The Modern Sock</a></h3>
-                                <div class="price">
-                                    <span>£29.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-                            <div class="product-item">
-                                <a href="shop-single.html" class="product-img">
-                                    <div class="label sale top-right">
-                                        <div class='content'>Sale</div>
-                                    </div>
-                                    <img src="images/products/sweater-2-min.jpg" alt="Image" class="img-fluid">
-                                </a>
-                                <h3 class="title"><a href="#">Double Knit Sweater</a></h3>
-                                <div class="price">
-                                    <del>£99.00</del> &mdash; <span>£69.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
-                            <div class="product-item">
-                                <a href="shop-single.html" class="product-img">
-                                    <div class="label sale top-right">
-                                        <div class='content'>Sale</div>
-                                    </div>
-                                    <img src="images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
-                                </a>
-                                <h3 class="title"><a href="#">The Murray</a></h3>
-                                <div class="price">
-                                    <del>£99.00</del> &mdash; <span>£69.00</span>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
 
                     <div class="row mt-5 pb-5">
@@ -366,4 +278,14 @@
             </div>
         </div> <!-- /.untree_co-section -->
 
-        
+<script>
+    $(function () {
+        $('a.add-to-favorites').click(function (e) {
+            e.preventDefault();
+            var productId = $(this).data('product-id');
+            $.post('/Favorites/AddToFavorite', { productId: productId }, function (data) {
+                // faça algo após o produto ser adicionado aos favoritos
+            });
+        });
+    });
+</script>

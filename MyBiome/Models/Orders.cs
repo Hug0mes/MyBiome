@@ -13,14 +13,16 @@ namespace MyBiome.Models
 		[ForeignKey("Customers")]
 		public int CustomersId { get; set; }
 
-        public string OrderDate { get; set; }
-
 		[ForeignKey("Shippers")]
 		public int ShipperId { get; set; }
-         
+
+        public string OrderDate { get; set; }
+
         public int TotalAmount { get; set; }
 
         public string OrderStatus { get; set; }
+
+
 
 
         public Customers Customers { get; set; }

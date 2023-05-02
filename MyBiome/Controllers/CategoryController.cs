@@ -1,11 +1,8 @@
-﻿ using MyBiome.Models;
-using MyBiome.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
+using MyBiome.Infrastructure;
+using MyBiome.Models;
 using NToastNotify;
-using MyBiome.Infrastructure.Components;
 
 namespace YourNamespace.Controllers
 {
@@ -70,7 +67,7 @@ namespace YourNamespace.Controllers
             return View(categoryVM);
         }
 
-    
+
         // GET: Category/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -78,7 +75,7 @@ namespace YourNamespace.Controllers
             {
                 return NotFound();
             }
-            
+
             var category = await _context.Categories.FindAsync(id);
             if (category == null)
             {

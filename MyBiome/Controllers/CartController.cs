@@ -5,6 +5,7 @@ using MyBiome.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authorization;
 using MyBiome.Models.ViewModels;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 
 namespace MyBiome.Controllers
 {
@@ -12,7 +13,7 @@ namespace MyBiome.Controllers
     {
 
         private readonly DataContext _context;
-
+       
         public CartController(DataContext context)
         {
             _context = context;
@@ -117,6 +118,15 @@ namespace MyBiome.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Checkout()
+        {
+            return View();
+        }
+
+        public IActionResult Thankyou()
+        {
+            return View();
+        }
 
     }
 }

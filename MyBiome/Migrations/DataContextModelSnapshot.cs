@@ -331,11 +331,9 @@ namespace MyBiome.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("AppUserId")
+                    b.Property<string>("CostumerId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("CostumerId")
-                        .HasColumnType("int");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -345,7 +343,7 @@ namespace MyBiome.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
+                    b.HasIndex("CostumerId");
 
                     b.HasIndex("ProductsId");
 
@@ -647,7 +645,9 @@ namespace MyBiome.Migrations
                 {
                     b.HasOne("MyBiome.Models.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId");
+                        .HasForeignKey("CostumerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("MyBiome.Models.Products", "Products")
                         .WithMany()

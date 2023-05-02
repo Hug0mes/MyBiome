@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\fonts\flaticon\font\Flaticon.svg" />
     <None Include="wwwroot\fonts\flaticon\font\Flaticon.woff2" />
     <None Include="wwwroot\fonts\flaticon\font\_flaticon.scss" />
@@ -131,10 +138,6 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="NToastNotify" Version="8.0.0" />
     <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
