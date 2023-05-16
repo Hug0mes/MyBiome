@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authorization;
 using MyBiome.Models.ViewModels;
 using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace MyBiome.Controllers
 {
@@ -13,10 +15,14 @@ namespace MyBiome.Controllers
     {
 
         private readonly DataContext _context;
-       
-        public CartController(DataContext context)
+        private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;
+        public CartController(DataContext context, SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
         {
             _context = context;
+            _signInManager = signInManager;
+            _userManager = userManager;
+
         }
 
 
@@ -118,9 +124,20 @@ namespace MyBiome.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public IActionResult Checkout()
         {
-            return View();
+            List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart") ?? new List<CartItem>();
+
+            CheckoutViewModel CheckVM = new()
+            {
+                CartItems = cart,
+
+                GrandTotal = cart.Sum(x => x.Quantity * x.Price)
+            };
+
+
+            return View(CheckVM);
         }
 
         public IActionResult Thankyou()
@@ -128,5 +145,27 @@ namespace MyBiome.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateOrder(Orders orders)
+        {
+            if (ModelState.IsValid)
+            {
+                List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart");
+
+                orders.UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                orders.CartItems = cart;
+                orders.OrderStatus = "Active";
+                orders.OrderDate = DateTime.Now;
+
+                _context.Orders.Add(orders);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            // Se o modelo não for válido, retorne a view com os erros de validação
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

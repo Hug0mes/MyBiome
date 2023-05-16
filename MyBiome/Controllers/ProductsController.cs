@@ -36,7 +36,6 @@ namespace MyBiome.Controllers
         public IActionResult ListProducts()
         {
 			
-
 			List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
             List<Category> categories = _context.Categories.ToList();
 

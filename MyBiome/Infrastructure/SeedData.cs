@@ -40,14 +40,14 @@ namespace MyBiome.Infrastructure
             var user = new AppUser
             {
                 UserName = "admin",
-                Email = "admin@example.com",
-                EmailConfirmed = true,
+                Email = "2005hugogomes@gmail.com",
+                EmailConfirmed = true, 
                 SecurityStamp = Guid.NewGuid().ToString("D")
             };
 
             if (!context.Users.Any(u => u.UserName == user.UserName))
             {
-                await userManager.CreateAsync(user, "123Pa$$word.");
+                await userManager.CreateAsync(user, "Hugo05gomes!");
                 await userManager.AddToRoleAsync(user, "Admin");
             }
         }

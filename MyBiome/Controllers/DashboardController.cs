@@ -29,6 +29,12 @@ namespace MyBiome.Controllers
             return View();
         }
 
+        public IActionResult Email()
+        {
+            return View();
+        }
+
+
         public async Task<IActionResult> Favorites()
         {
            
