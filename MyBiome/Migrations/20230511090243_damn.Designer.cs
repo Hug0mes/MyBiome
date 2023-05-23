@@ -12,7 +12,7 @@ using MyBiome.Infrastructure;
 namespace MyBiome.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230516194258_damn")]
+    [Migration("20230511090243_damn")]
     partial class damn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -448,14 +448,14 @@ namespace MyBiome.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("GrandTotal")
+                    b.Property<decimal>("GrandTotal")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("OrderDate")
+                    b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("OrderNotes")
@@ -463,13 +463,14 @@ namespace MyBiome.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OrderStatus")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PostalCode")
+                    b.Property<int>("PostalCode")
                         .HasColumnType("int");
 
                     b.Property<string>("State")
@@ -477,6 +478,11 @@ namespace MyBiome.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

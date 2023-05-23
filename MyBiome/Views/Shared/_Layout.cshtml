@@ -75,25 +75,19 @@
 						<span class="text-primary">.</span></a>
 
 					<ul class="js-clone-nav pl-0 d-none d-lg-inline-block site-menu">
-						<li class="active"><a href="shop.html">Home</a></li>
+						<li class="active"><a asp-controller="Home" asp-action="index">Home</a></li>
 						<li class="has-children">
-							<a href="shop.html">Shop</a>
+							<a asp-controller="products" asp-action="ListProducts">Shop</a>
 							<ul class="dropdown">
 								<li><a asp-controller="products" asp-action="ListProducts">Se all</a></li>
-								<li><a href="#">Baby's'</a></li>
-								<li><a href="#">Large</a></li>
-								<li><a href="#">Flowering</a></li>
-								<li><a href="#">Foliage</a></li>
-								<li><a href="#">Rare</a></li>
+							
 							</ul>
 						</li>
 						<li class="has-children">
-							<a href="#"> Dashboard </a>
+							<a asp-controller="Dashboard" asp-action="index"> Dashboard </a>
 							<ul class="dropdown">
-								<li><a href="">Favorites</a></li>
-								<li><a href="">My orders</a></li>
-								<li><a href="">My Info</a></li>
-								<li><a href="">Cart</a></li>
+								<li><a asp-controller="Dashboard" asp-action="Favorites">Favorites</a></li>
+								<li><a asp-controller="Orders" asp-action="index">My orders</a></li>
 								<li><a href="">Checkout</a></li>
 								
 							
@@ -109,7 +103,7 @@
 							</ul>
 						</li>
 
-						<li><a href="shop.html">Blog</a></li>
+						<li><a asp-controller="Home" asp-action="blog">Blog</a></li>
 					
 					</ul>
 
@@ -163,8 +157,8 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-5">
 					<div class="widget mb-4">
-						<h3 class="mb-2">About UntreeStore</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi cumque rem recusandae quaerat at asperiores beatae saepe repudiandae quam rerum aspernatur dolores et ipsa obcaecati voluptates libero</p>
+						<h3 class="mb-2">About MyBiome</h3>
+						<p>We offer a wide selection of plants to bring life to your home. Our plants are carefully selected to bring a vibrant splash of color and beauty to your living space. Thank you for choosing MyBiome. We look forward to helping you bring life to your home. </p>
 					</div>
 					<div class="widget">
 						<h3>Join our mailing list and receive exclusives</h3>
@@ -264,6 +258,8 @@
 
 
     @await RenderSectionAsync("Scripts", required: false)
+	@await Component.InvokeAsync("NToastNotify")
+
 </body>
 
 </html>

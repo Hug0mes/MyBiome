@@ -207,6 +207,9 @@
 
     <!-- Template Javascript -->
     <script src="~/Assets/js/main.js"></script>
+
+   @await RenderSectionAsync("Scripts", required: false)
+    @await Component.InvokeAsync("NToastNotify")
 </body>
 
 </html>

@@ -6,6 +6,12 @@ using NToastNotify;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddRazorPages().AddNToastNotifyNoty(new NotyOptions
+{
+	ProgressBar = true,
+	Timeout = 5000
+});
+
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<DataContext>(options =>

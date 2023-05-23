@@ -10,11 +10,11 @@ namespace MyBiome.Models
         [System.ComponentModel.DataAnnotations.Key]
         public int Id { get; set; }
         
-        public string? UserId { get; set; }
+        public string UserId { get; set; }
 
-        public List<CartItem>? CartItems { get; set; }
+        public List<CartItem> CartItems { get; set; }
 
-        public decimal? GrandTotal { get; set; }
+        public decimal GrandTotal { get; set; }
 
         public string Country { get; set; }
 
@@ -26,7 +26,7 @@ namespace MyBiome.Models
 
         public string State { get; set; }
 
-        public int? PostalCode { get; set; }
+        public int PostalCode { get; set; }
 
         public string EmailAddress { get; set; }
 
@@ -34,9 +34,9 @@ namespace MyBiome.Models
 
         public string OrderNotes { get; set; }
 
-        public DateTime? OrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
 
-        public string? OrderStatus { get; set; }   
+        public string OrderStatus { get; set; }   
 
      
 

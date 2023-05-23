@@ -8,7 +8,6 @@ using MyBiome.Models.ViewModels;
 using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
-using System;
 
 namespace MyBiome.Controllers
 {
@@ -150,25 +149,23 @@ namespace MyBiome.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateOrder(Orders orders)
         {
-            List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart") ?? new List<CartItem>();
             if (ModelState.IsValid)
             {
+                List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart");
 
                 orders.UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 orders.CartItems = cart;
                 orders.OrderStatus = "Active";
                 orders.OrderDate = DateTime.Now;
-                orders.GrandTotal = cart.Sum(x => x.Quantity * x.Price);
+
                 _context.Orders.Add(orders);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Thankyou));
             }
+
             // Se o modelo não for válido, retorne a view com os erros de validação
             return RedirectToAction(nameof(Index));
         }
-      
-
-     
     }
 }
