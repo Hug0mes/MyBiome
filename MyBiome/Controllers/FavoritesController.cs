@@ -51,7 +51,7 @@ namespace MyBiome.Controllers
             return View(favorites);
         }
 
-        [HttpGet]
+        //[HttpGet]
         [HttpPost]
         public async Task<IActionResult> AddToFavorite(int id)
         {
@@ -73,8 +73,6 @@ namespace MyBiome.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
 
         [HttpPost]
         public async Task<IActionResult> Remove(int id)

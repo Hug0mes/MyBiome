@@ -56,7 +56,9 @@ namespace MyBiome.Controllers
             }
 
             var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
+				.Include(p => p.SubCategory)
+				.Include(p => p.SubCategory.Category)
+				.FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();

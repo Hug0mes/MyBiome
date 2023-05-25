@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyBiome.Models;
 using MyBiome.Models.ViewModels;
+using NToastNotify;
 
 namespace MyBiome.Controllers
 {
@@ -14,8 +15,8 @@ namespace MyBiome.Controllers
 
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-
-        public IActionResult Index()
+		private readonly IToastNotification _toastNotification;
+		public IActionResult Index()
         {
             return View();
         }

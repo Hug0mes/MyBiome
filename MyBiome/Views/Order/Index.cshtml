@@ -1,0 +1,43 @@
+﻿@model List<Orders>
+@{
+    ViewData["Title"] = "Index";
+}
+<div style=" padding: 40px;
+  margin-top: 40px;">
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Id
+            </th>
+                <th>
+                    address
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>
+</div>

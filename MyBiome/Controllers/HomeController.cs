@@ -19,6 +19,10 @@ namespace MyBiome.Controllers
             return View();
         }
 
+        public IActionResult cofcof()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

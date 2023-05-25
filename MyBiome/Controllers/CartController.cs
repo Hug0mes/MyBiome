@@ -8,6 +8,7 @@ using MyBiome.Models.ViewModels;
 using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using NToastNotify;
 
 namespace MyBiome.Controllers
 {
@@ -17,13 +18,15 @@ namespace MyBiome.Controllers
         private readonly DataContext _context;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
-        public CartController(DataContext context, SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
+		private readonly IToastNotification _toastNotification;
+		public CartController(DataContext context, SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, IToastNotification toastNotification)
         {
             _context = context;
             _signInManager = signInManager;
             _userManager = userManager;
+			_toastNotification = toastNotification;
 
-        }
+		}
 
 
 		public IActionResult Index()
@@ -60,8 +63,9 @@ namespace MyBiome.Controllers
             }
 
 			HttpContext.Session.SetJson("Cart", cart);
-
-			TempData["Success"] = "The product has been added!";
+		
+			_toastNotification.AddSuccessToastMessage($"The product has been added!");
+		
 
             return Redirect(Request.Headers["Referer"].ToString());
         }
@@ -157,11 +161,13 @@ namespace MyBiome.Controllers
                 orders.CartItems = cart;
                 orders.OrderStatus = "Active";
                 orders.OrderDate = DateTime.Now;
+                orders.GrandTotal = cart.Sum(x => x.Quantity * x.Price);
 
-                _context.Orders.Add(orders);
+
+				_context.Orders.Add(orders);
                 await _context.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Thankyou));
+           
+				return RedirectToAction(nameof(Thankyou));
             }
 
             // Se o modelo não for válido, retorne a view com os erros de validação

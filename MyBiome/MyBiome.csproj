@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\RoleManager\Index.cshtml" />
+    <None Include="Views\UserRoles\Index.cshtml" />
+    <None Include="Views\UserRoles\Manage.cshtml" />
     <None Include="wwwroot\Assets\js\main.js" />
     <None Include="wwwroot\Assets\lib\chart\chart.min.js" />
     <None Include="wwwroot\Assets\lib\easing\easing.js" />
