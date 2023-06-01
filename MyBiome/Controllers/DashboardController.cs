@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -57,7 +58,12 @@ namespace MyBiome.Controllers
             return View();
         }
 
-      
+   //     public async Task<IActionResult> Logout()
+   //     {
+			//Session.Clear();
+			//return RedirectToAction("Index", "Home");
+   //     }
+
         public ActionResult PartialView()
         {
             return PartialView();

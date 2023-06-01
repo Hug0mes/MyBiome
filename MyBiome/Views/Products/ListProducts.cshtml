@@ -1,4 +1,5 @@
-﻿@model ProductsViewModel
+﻿﻿ 
+@model ProductsViewModel
 
     <div class="page-heading bg-light">
 
@@ -75,9 +76,25 @@
                                         <div class="content" style=" transform: rotate(90deg); ">
 
                                             <a asp-controller="Cart" asp-action="Add" asp-route-id="@products.Id"> <img style="width: 19px; height: 19px; opacity:0.8;  box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.5);;" src="~/images/icons/cart.png"></img></a>
-                                            <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
-                              
+
+                                        @*    @if (User.Identity.IsAuthenticated)
+                                            {*@
                                                 
+                                                    @if (Model.favorites.Any(p => p.Id == products.Id))
+                                                    {
+                                                        <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
+                                            
+                                                    }else{
+                                                        <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/filled_heart.png"></img></a>
+                                               }
+
+                                          @*  }else
+                                            {
+                                                
+                                                <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
+                     
+                                            }*@
+
                                                
                                         </div>  
                                     </div>
@@ -277,15 +294,17 @@
                 </div>
             </div>
         </div> <!-- /.untree_co-section -->
-
+@*
 <script>
-    $(function () {
-        $('a.add-to-favorites').click(function (e) {
-            e.preventDefault();
-            var productId = $(this).data('product-id');
-            $.post('/Favorites/AddToFavorite', { productId: productId }, function (data) {
-                // faça algo após o produto ser adicionado aos favoritos
-            });
-        });
-    });
-</script>
+    //$(function () {
+    //    $('a.add-to-favorites').click(function (e) {
+    //        e.preventDefault();
+    //        var productId = $(this).data('product-id');
+    //        $.post('/Favorites/AddToFavorite', { productId: productId }, function (data) {
+    //            // faça algo após o produto ser adicionado aos favoritos
+    //        });
+    //    });
+    //});
+
+   
+</script>*@

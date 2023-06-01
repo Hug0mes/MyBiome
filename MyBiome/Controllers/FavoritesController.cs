@@ -19,12 +19,14 @@ namespace MyBiome.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IToastNotification _toastNotification;
 
-        public FavoritesController(UserManager<AppUser> userManager, DataContext context, IHttpContextAccessor httpContextAccessor)
+        public FavoritesController(UserManager<AppUser> userManager, DataContext context, IHttpContextAccessor httpContextAccessor, IToastNotification nToastNotify)
         {
             _context = context;
             _userManager = userManager;
             _httpContextAccessor = httpContextAccessor;
+            _toastNotification = nToastNotify;
         }
 
 
@@ -51,7 +53,7 @@ namespace MyBiome.Controllers
             return View(favorites);
         }
 
-        //[HttpGet]
+        [HttpGet]
         [HttpPost]
         public async Task<IActionResult> AddToFavorite(int id)
         {
@@ -71,7 +73,9 @@ namespace MyBiome.Controllers
             _context.Favorites.Add(favorite);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+           _toastNotification.AddSuccessToastMessage($"The product has been added to favorites!");
+
+            return Redirect(Request.Headers["Referer"].ToString());
         }
 
         [HttpPost]
@@ -91,6 +95,18 @@ namespace MyBiome.Controllers
         }
     }
 
+    //public bool IsProductFavorite(int productId)
+    //{
+    //    var user = _userManager.GetUserAsync(User).Result;
+    //    if (user != null)
+    //    {
+    //        // Verificar se o produto está na lista de favoritos do usuário
+    //        var favorite = _context.Favorites.FirstOrDefault(f => f.CostumerId == user.Id && f.ProductId == productId);
+    //        return favorite != null;
+    //    }
+
+    //    return false;
+    //}
 
 
 }

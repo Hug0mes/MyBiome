@@ -17,6 +17,7 @@ namespace MyBiome.Models
         public List<Category>? Categories { get; set; }
         public List<SubCategory>? subCategories { get; set; }
 
+        public List<Favorites>? favorites { get; set; }
 
     }
 }

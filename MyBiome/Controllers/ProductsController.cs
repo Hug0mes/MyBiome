@@ -6,22 +6,26 @@ using MyBiome.Infrastructure;
 using MyBiome.Models;
 using NToastNotify;
 using MyBiome.Helpers;
+using Microsoft.AspNetCore.Identity;
+
 namespace MyBiome.Controllers
 {
     public class ProductsController : Controller
     {
+        private readonly UserManager<AppUser> _userManager;
         private readonly DataContext _context;
         private readonly IWebHostEnvironment _appEnvironment;
         private readonly IToastNotification _toastNotification;
         private readonly string _imageFolder;
 
  
-        public ProductsController(DataContext context, IWebHostEnvironment appEnvironment, IToastNotification toastNotification)
+        public ProductsController(DataContext context, IWebHostEnvironment appEnvironment, IToastNotification toastNotification, UserManager<AppUser> userManager)
         {
             _context = context;
             _appEnvironment = appEnvironment;
             _toastNotification = toastNotification;
             _imageFolder = Path.Combine(_appEnvironment.WebRootPath, "images\\Products");
+            _userManager = userManager;
         }
 
 
@@ -35,14 +39,20 @@ namespace MyBiome.Controllers
         // GET: Products1
         public IActionResult ListProducts()
         {
-			
-			List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
+            var user = _userManager.GetUserAsync(User);
+         
+
+            List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
             List<Category> categories = _context.Categories.ToList();
+            //List<Favorites> favorites = _context.Favorites.Where(p => p.CostumerId = user.Id).ToList();
+  
 
             ProductsViewModel viewModel = new ProductsViewModel()
             {
                 ProductsList = products,
                 Categories = categories
+                //,
+                //favorites = favorites
             };
             return View(viewModel);
         }

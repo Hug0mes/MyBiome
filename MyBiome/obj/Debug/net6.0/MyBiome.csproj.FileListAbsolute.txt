@@ -850,3 +850,5 @@ C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\obj\Debug\net6.0\refint\MyBi
 C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\obj\Debug\net6.0\MyBiome.pdb
 C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\obj\Debug\net6.0\MyBiome.genruntimeconfig.cache
 C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\obj\Debug\net6.0\ref\MyBiome.dll
+C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\bin\Debug\net6.0\Moq.dll

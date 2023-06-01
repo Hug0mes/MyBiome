@@ -633,6 +633,10 @@
       "PackagePath": "staticwebassets\\images\\categories\\1fa89949-5c15-4547-b037-5133e779302a_cloth_3.jpg"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\25a12d44-da4d-458e-ab6a-90e5d610c6ac_sock-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\25a12d44-da4d-458e-ab6a-90e5d610c6ac_sock-1-min.jpg"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\3a364771-0177-4e1d-b536-e4ab1ee5cdc1_gal_6.jpg",
       "PackagePath": "staticwebassets\\images\\categories\\3a364771-0177-4e1d-b536-e4ab1ee5cdc1_gal_6.jpg"
     },
@@ -673,6 +677,10 @@
       "PackagePath": "staticwebassets\\images\\categories\\cloth_1.jpg"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\d2531f33-c622-4e81-b888-feef80d9b116_watch-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\d2531f33-c622-4e81-b888-feef80d9b116_watch-1-min.jpg"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\e1dd305a-d98b-4e3f-a29c-239a8435b52c_cloth_3.jpg",
       "PackagePath": "staticwebassets\\images\\categories\\e1dd305a-d98b-4e3f-a29c-239a8435b52c_cloth_3.jpg"
     },
@@ -691,6 +699,10 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cofcof.jpg",
       "PackagePath": "staticwebassets\\images\\cofcof.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\coverlogin.jpg",
+      "PackagePath": "staticwebassets\\images\\coverlogin.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_1.jpg",
@@ -745,6 +757,10 @@
       "PackagePath": "staticwebassets\\images\\icons\\empty_heart.png"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\filled_heart.png",
+      "PackagePath": "staticwebassets\\images\\icons\\filled_heart.png"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\full_heart.png",
       "PackagePath": "staticwebassets\\images\\icons\\full_heart.png"
     },
@@ -763,6 +779,10 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\icons\\logo-white.png",
       "PackagePath": "staticwebassets\\images\\icons\\logo-white.png"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\logoutt.png",
+      "PackagePath": "staticwebassets\\images\\logoutt.png"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\person_1.jpg",

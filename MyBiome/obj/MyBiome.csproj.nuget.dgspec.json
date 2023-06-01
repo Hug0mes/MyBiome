@@ -97,6 +97,10 @@
               "target": "Package",
               "version": "[6.0.11, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
             "NToastNotify": {
               "target": "Package",
               "version": "[8.0.0, )"

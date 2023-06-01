@@ -63,10 +63,10 @@
                         </div>
                     </div>
                     <a asp-controller="Dashboard" asp-action="favorites" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Favorites</a>
-                    <a class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i> My Orders </a>
-                    <a class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Log Out</a>
+                    <a  asp-controller="orders" asp-action="index" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i> My Orders </a>
+              
+                    @if(@Context.User.IsInRole("Admin")){
+
                     <div class="nav-item dropdown">
                         <a asp-controller="Category" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Categories</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -81,10 +81,12 @@
                         <div class="dropdown-menu bg-transparent border-0">
                             <a asp-controller="Products" asp-action="create"  class="dropdown-item">Add Categorie</a>
                             <a asp-controller="SubCategory" asp-action="index" class="dropdown-item">SubCategories</a>
-                            <a class="dropdown-item">Change Password</a>
-                            <a class="dropdown-item">Blank Page</a>
+                         
                         </div>
                     </div>
+                    }
+                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Log Out</a>
+
                 </div>
             </nav>
         </div>
@@ -93,9 +95,7 @@
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a  class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
-                </a>
+                
                 <a  class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -103,18 +103,14 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificatin</span>
-                        </a>
+                    <div class="nav-item">
                       
+                            <i class="fa fa-envelope me-lg-2"></i>
+
+                    </div>
+                    <div class="nav-item">
+                     
+                            <i class="fa fa-bell me-lg-2"></i>
                     </div>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -124,7 +120,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a class="dropdown-item">My Profile</a>
                             <a class="dropdown-item">Settings</a>
-                            <a class="dropdown-item">Log Out</a>
+                            <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>
@@ -136,16 +132,15 @@
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
+            <footer class="bg-light rounded-top p-4">
+                <div class="container-fluid pt-4 px-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">MyBiome</a>, All Right Reserved.
+                            &copy; <a href="#">MyBiome</a>, All Rights Reserved.
                         </div>
-                       
                     </div>
                 </div>
-            </div>
+            </footer>
             <!-- Footer End -->
         </div>
         <!-- Content End -->
