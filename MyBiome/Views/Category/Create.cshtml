@@ -1,18 +1,27 @@
 ﻿@model MyBiome.Models.CategoryViewModel
 
-<div style=" padding: 40px;
-  margin-top: 40px;">
+@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
+}
 
-<div class="container"> 
-<h2>Create</h2>
 
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Category.Name" class="control-label"></label>
-                <input asp-for="Category.Name" class="form-control" />
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Create Category</h6>
+            <form>
+                <div class="mb-3">
+                    <label asp-for="Category.Name" class="form-label"></label>
+                <input type="text" asp-for="Category.Name" class="form-control"  >
                 <span asp-validation-for="Category.Name" class="text-danger"></span>
-            </div>
+                </div>
+
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label"></label>
                 <div class="custom-file">
@@ -21,17 +30,28 @@
                 </div>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
+            <button type="submit" value="Create" class="btn btn-primary">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+
+        @*<form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Category.Name" class="control-label"></label>
+                <input asp-for="Category.Name" class="form-control" />
+               
+            </div>
+           
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-        </form>
+        </form>*@
 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-    </div>
-</div>
-
 
 
 @section Scripts {

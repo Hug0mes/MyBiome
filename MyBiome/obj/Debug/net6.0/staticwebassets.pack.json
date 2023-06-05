@@ -617,8 +617,12 @@
       "PackagePath": "staticwebassets\\icon.png"
     },
     {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover.jpg",
-      "PackagePath": "staticwebassets\\images\\PlantCover.jpg"
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\Covergirl.jpg",
+      "PackagePath": "staticwebassets\\images\\Covergirl.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover2.jpg",
+      "PackagePath": "staticwebassets\\images\\PlantCover2.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover2.png",
@@ -627,6 +631,10 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\03144a49-8766-493f-84bb-71d214066b82_gal_6.jpg",
       "PackagePath": "staticwebassets\\images\\categories\\03144a49-8766-493f-84bb-71d214066b82_gal_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\184abae6-08a1-48c3-aa36-9829d7d40e1b_sweater-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\184abae6-08a1-48c3-aa36-9829d7d40e1b_sweater-1-min.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\1fa89949-5c15-4547-b037-5133e779302a_cloth_3.jpg",
@@ -699,10 +707,6 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\cofcof.jpg",
       "PackagePath": "staticwebassets\\images\\cofcof.jpg"
-    },
-    {
-      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\coverlogin.jpg",
-      "PackagePath": "staticwebassets\\images\\coverlogin.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_1.jpg",
@@ -781,6 +785,10 @@
       "PackagePath": "staticwebassets\\images\\icons\\logo-white.png"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\logincover.jpg",
+      "PackagePath": "staticwebassets\\images\\logincover.jpg"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\logoutt.png",
       "PackagePath": "staticwebassets\\images\\logoutt.png"
     },
@@ -803,6 +811,10 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\19ca7292-bdf9-4624-9147-e863b4e34339_hero-slider-4-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\19ca7292-bdf9-4624-9147-e863b4e34339_hero-slider-4-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\20639b19-f69e-48d5-bfc3-eba125840a57_watch-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20639b19-f69e-48d5-bfc3-eba125840a57_watch-1-min.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\2e074111-17f3-4ec2-af81-c24e2286ae0a_hero-slider-2-min.jpg",
@@ -833,8 +845,16 @@
       "PackagePath": "staticwebassets\\images\\products\\78ef309f-0d5e-482c-8cda-605dac9901d9_gal_6.jpg"
     },
     {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\795defb2-9e34-4e80-af5e-df1fb4b14e93_jacket-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\795defb2-9e34-4e80-af5e-df1fb4b14e93_jacket-1-min.jpg"
+    },
+    {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\7a2c1537-2382-4b10-8b31-580819d63509_gal_6.jpg",
       "PackagePath": "staticwebassets\\images\\products\\7a2c1537-2382-4b10-8b31-580819d63509_gal_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\83c22fcf-f83a-4d45-8112-6f334357cc98_sweater-1-min.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\83c22fcf-f83a-4d45-8112-6f334357cc98_sweater-1-min.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png",
@@ -875,6 +895,10 @@
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\sweater-2-min.jpg",
       "PackagePath": "staticwebassets\\images\\products\\sweater-2-min.jpg"
+    },
+    {
+      "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\registerCover.jpg",
+      "PackagePath": "staticwebassets\\images\\registerCover.jpg"
     },
     {
       "Id": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_1.jpg",

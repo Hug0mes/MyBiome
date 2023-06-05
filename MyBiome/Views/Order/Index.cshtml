@@ -1,43 +1,54 @@
 ﻿@model List<Orders>
 @{
     ViewData["Title"] = "Index";
+
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
 }
-<div style=" padding: 40px;
-  margin-top: 40px;">
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Order Id
-            </th>
-                <th>
-                    address
-                </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adress)
-            </td>
-
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
-            </td>
-        </tr>
-            }
-    </tbody>
-</table>
+<div style="height:80vh">
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+           <h3 class="mb-0">My orders</h3>
+         @*   <a href="">Show All</a>*@
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                   
+                        <th scope="col">Date</th>
+                       
+                        <th scope="col">Sent to</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                    <tr>
+                      
+                            <td>@item.OrderDate </td>
+                        
+                        <td>@item.PostalCode</td>
+                        <td>@item.GrandTotal €</td>
+                        <td>@item.OrderStatus</td>
+                        <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                    </tr>
+                    }
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->
 </div>

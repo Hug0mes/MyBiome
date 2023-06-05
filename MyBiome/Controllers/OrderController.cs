@@ -41,6 +41,22 @@ namespace MyBiome.Controllers
             return View(order);
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            return View(order);
+        }
 
 
     }

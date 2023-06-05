@@ -76,17 +76,17 @@
                                         <div class="content" style=" transform: rotate(90deg); ">
 
                                             <a asp-controller="Cart" asp-action="Add" asp-route-id="@products.Id"> <img style="width: 19px; height: 19px; opacity:0.8;  box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.5);;" src="~/images/icons/cart.png"></img></a>
-
+                                            <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
                                         @*    @if (User.Identity.IsAuthenticated)
                                             {*@
                                                 
-                                                    @if (Model.favorites.Any(p => p.Id == products.Id))
+                                                 @*   @if (Model.favorites.Any(p => p.Id == products.Id))
                                                     {
-                                                        <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
-                                            
+                                                        
+                                            //coração
                                                     }else{
                                                         <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/filled_heart.png"></img></a>
-                                               }
+                                               }*@
 
                                           @*  }else
                                             {

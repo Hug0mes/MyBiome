@@ -1,7 +1,15 @@
 ﻿@model List<Products>
 
-<div style=" padding: 40px;
-      margin-top: 40px;">
+@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
+}
 
 <h2>Products</h2>
 
@@ -61,4 +69,4 @@ else
     <p>No subcategories found.</p>
 }
 
- </div>    
+ 

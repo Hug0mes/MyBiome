@@ -1,10 +1,15 @@
 ﻿@model MyBiome.Models.Category
 
 @{
-    ViewData["Title"] = "Edit";
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
 }
-<div style=" padding: 40px;
-  margin-top: 40px;">
 
 <h1>Edit</h1>
 
@@ -30,7 +35,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-</div>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

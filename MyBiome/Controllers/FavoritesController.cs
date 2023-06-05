@@ -9,6 +9,7 @@ using MyBiome.Models;
 using MyBiome.Models.ViewModels;
 using NToastNotify;
 using System.Security.Claims;
+using Castle.Core.Resource;
 
 
 namespace MyBiome.Controllers
@@ -33,25 +34,24 @@ namespace MyBiome.Controllers
         public async Task<IActionResult> Favorites()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var favorites = await _context.Favorites
+
+            // Recuperar os produtos favoritos do banco de dados para o usuário atualmente autenticado
+            List<Favorites> favoriteItems = _context.Favorites
                 .Where(f => f.CostumerId == userId)
                 .Include(f => f.Products)
-                .ToListAsync();
+                .ToList();
+
+            // Extrair a lista de produtos favoritos dos itens favoritos
+            List<Products> favoriteProducts = favoriteItems.Select(f => f.Products).ToList();
+
+
+
 
             // Envia a lista de favoritos para a view
-            return View(favorites);
+            return View(favoriteProducts);
         }
 
-        public async Task<IActionResult> Index(string customerId)
-        {
-            var favorites = await _context.Favorites
-                .Where(f => f.CostumerId == customerId)
-                .Include(f => f.Products)
-                .Include(f => f.AppUser)
-                .ToListAsync();
-
-            return View(favorites);
-        }
+       
 
         [HttpGet]
         [HttpPost]

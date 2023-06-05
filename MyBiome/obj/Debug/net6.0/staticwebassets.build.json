@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w3hKM8vzUkxJ/lnE6E9uE4HOrR4CW4Ly8pZ+FK7gWKA=",
+  "Hash": "Ck733PECYsxayN/lbYd9JXpX8sob1cUsjg8p6xYBMn0=",
   "Source": "MyBiome",
   "BasePath": "_content/MyBiome",
   "Mode": "Default",
@@ -3723,6 +3723,23 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\03144a49-8766-493f-84bb-71d214066b82_gal_6.jpg"
     },
     {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\184abae6-08a1-48c3-aa36-9829d7d40e1b_sweater-1-min.jpg",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "images/categories/184abae6-08a1-48c3-aa36-9829d7d40e1b_sweater-1-min.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\categories\\184abae6-08a1-48c3-aa36-9829d7d40e1b_sweater-1-min.jpg"
+    },
+    {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\categories\\1fa89949-5c15-4547-b037-5133e779302a_cloth_3.jpg",
       "SourceId": "MyBiome",
       "SourceType": "Discovered",
@@ -4029,12 +4046,12 @@
       "OriginalItemSpec": "wwwroot\\images\\cofcof.jpg"
     },
     {
-      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\coverlogin.jpg",
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\Covergirl.jpg",
       "SourceId": "MyBiome",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
       "BasePath": "_content/MyBiome",
-      "RelativePath": "images/coverlogin.jpg",
+      "RelativePath": "images/Covergirl.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4043,7 +4060,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\coverlogin.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\Covergirl.jpg"
     },
     {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\gal_1.jpg",
@@ -4369,6 +4386,23 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\logo-white.png"
     },
     {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\logincover.jpg",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "images/logincover.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logincover.jpg"
+    },
+    {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\logoutt.png",
       "SourceId": "MyBiome",
       "SourceType": "Discovered",
@@ -4454,12 +4488,12 @@
       "OriginalItemSpec": "wwwroot\\images\\person_4.jpg"
     },
     {
-      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover.jpg",
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover2.jpg",
       "SourceId": "MyBiome",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
       "BasePath": "_content/MyBiome",
-      "RelativePath": "images/PlantCover.jpg",
+      "RelativePath": "images/PlantCover2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4468,7 +4502,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\PlantCover.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\PlantCover2.jpg"
     },
     {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\PlantCover2.png",
@@ -4503,6 +4537,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\19ca7292-bdf9-4624-9147-e863b4e34339_hero-slider-4-min.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\20639b19-f69e-48d5-bfc3-eba125840a57_watch-1-min.jpg",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "images/products/20639b19-f69e-48d5-bfc3-eba125840a57_watch-1-min.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\20639b19-f69e-48d5-bfc3-eba125840a57_watch-1-min.jpg"
     },
     {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\2e074111-17f3-4ec2-af81-c24e2286ae0a_hero-slider-2-min.jpg",
@@ -4624,6 +4675,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\78ef309f-0d5e-482c-8cda-605dac9901d9_gal_6.jpg"
     },
     {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\795defb2-9e34-4e80-af5e-df1fb4b14e93_jacket-1-min.jpg",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "images/products/795defb2-9e34-4e80-af5e-df1fb4b14e93_jacket-1-min.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\795defb2-9e34-4e80-af5e-df1fb4b14e93_jacket-1-min.jpg"
+    },
+    {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\7a2c1537-2382-4b10-8b31-580819d63509_gal_6.jpg",
       "SourceId": "MyBiome",
       "SourceType": "Discovered",
@@ -4639,6 +4707,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\7a2c1537-2382-4b10-8b31-580819d63509_gal_6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\83c22fcf-f83a-4d45-8112-6f334357cc98_sweater-1-min.jpg",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "images/products/83c22fcf-f83a-4d45-8112-6f334357cc98_sweater-1-min.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\83c22fcf-f83a-4d45-8112-6f334357cc98_sweater-1-min.jpg"
     },
     {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\products\\85ab4446-bb4f-452c-bf86-cae2104238c5_plantapng.png",
@@ -4809,6 +4894,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\sweater-2-min.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\registerCover.jpg",
+      "SourceId": "MyBiome",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\",
+      "BasePath": "_content/MyBiome",
+      "RelativePath": "images/registerCover.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\registerCover.jpg"
     },
     {
       "Identity": "C:\\Users\\2005h\\Desktop\\Git_Projects\\MyBiome\\MyBiome\\wwwroot\\images\\shoe_1.jpg",

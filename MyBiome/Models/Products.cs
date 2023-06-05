@@ -42,6 +42,6 @@ namespace MyBiome.Models
 
         [NotMapped]
         public List<SubCategory>? SubCategories { get; set; }
-
+        public List<Favorites>? Favorites { get; set; }
     }
 }

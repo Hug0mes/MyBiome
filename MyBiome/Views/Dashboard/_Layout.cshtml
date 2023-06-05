@@ -48,44 +48,52 @@
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="ms-3">
-                        <img src="~/images/icons/aesthetic-flower-plant-leaves.png" alt="" style="width: auto; height: 150px; left: auto ">
+                        <img src="~/images/icons/aesthetic-flower-plant-leaves.png" alt="" style="width: auto; height: 105px; left: 130px">
                     </div>
                        
                 </div>
                 <div class="navbar-nav w-100">
                    
                     <div class="nav-item dropdown">
-                        <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Account</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Account</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a class="dropdown-item">Change Email</a>
                             <a asp-controller="Account" asp-action="changePassword" class="dropdown-item">Change password</a>
-                            <a  class="dropdown-item">Other Elements</a>
+                          
                         </div>
                     </div>
-                    <a asp-controller="Dashboard" asp-action="favorites" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Favorites</a>
-                    <a  asp-controller="orders" asp-action="index" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i> My Orders </a>
+                    <a asp-controller="Dashboard" asp-action="favorites" class="nav-item nav-link"><i class="fa fa-heart me-2"></i>Favorites</a>
+                    <a asp-controller="order" asp-action="index" class="nav-item nav-link"><i class="fa fa-shopping-cart me-2"></i> My Orders </a>
               
                     @if(@Context.User.IsInRole("Admin")){
 
                     <div class="nav-item dropdown">
-                        <a asp-controller="Category" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Categories</a>
+                            <a asp-controller="Category" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th-large me-2"></i>Categories</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a asp-controller="Category" asp-action="create"  class="dropdown-item">Add Categorie</a>
                             <a asp-controller="SubCategory" asp-action="index" class="dropdown-item">SubCategories</a>
-                            <a class="dropdown-item">Change Password</a>
-                            <a class="dropdown-item">Blank Page</a>
+                          
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a asp-controller="Products" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Products</a>
+                            <a asp-controller="Products" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-leaf me-2"></i>Products</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Products" asp-action="create"  class="dropdown-item">Add Categorie</a>
-                            <a asp-controller="SubCategory" asp-action="index" class="dropdown-item">SubCategories</a>
+                            <a asp-controller="Products" asp-action="create"  class="dropdown-item">New Product</a>
+                            <a asp-controller="Products" asp-action="index" class="dropdown-item">All Products</a>
                          
                         </div>
                     </div>
+                        <div class="nav-item dropdown">
+                            <a asp-controller="RolesManager" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-cogs me-2"></i>Roles</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a asp-controller="Userroles" asp-action="index" class="dropdown-item">User Roles</a>
+                                <a asp-controller="RoleManager" asp-action="index" class="dropdown-item">Menage Roles</a>
+
+                            </div>
+                        </div>
+                     
                     }
-                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Log Out</a>
+                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="nav-item nav-link"><i class="fa fa-sign-out me-2"></i>Log Out</a>
 
                 </div>
             </nav>
@@ -103,15 +111,17 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item">
-                      
-                            <i class="fa fa-envelope me-lg-2"></i>
-
-                    </div>
-                    <div class="nav-item">
+                   
+                    <a class="nav-link" asp-controller="cart">
+                        <i class="fa fa-shopping-cart me-lg-2"></i>
                      
-                            <i class="fa fa-bell me-lg-2"></i>
-                    </div>
+                    </a>
+
+                    <a class="nav-link" asp-controller="Home">
+                        <i class="fa fa-home me-lg-2"></i>
+
+                    </a>
+                  
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                            @* <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">*@
@@ -126,7 +136,7 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            <div class="container-fluid pt-4 px-4">
+            <div class="container-fluid pt-4 px-4" style="min-height: 80vh;">
                 @RenderBody()
             </div>
 

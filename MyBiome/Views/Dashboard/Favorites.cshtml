@@ -10,23 +10,17 @@
 
         @foreach (var favorite in Model)
         {
-            <li>@favorite.ProductId</li>
             
             <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Produto 1">
+                <img src="https://via.placeholder.com/350x200" height="200px" width="350px" class="card-img-top" alt="Produto 1">
                 <div class="card-body">
-                        <h5 class="card-title">@favorite.ProductId</h5>
-                        @if (favorite.Products != null)
-                        {
-                            <h5 class="card-title">@favorite.Products.Name</h5>
-                        }
-                        else
-                        {
-                            <p>Produto não encontrado</p>
-                        }
+                        <h5 class="card-title">@favorite.Products.Name</h5>
+                      
+                            <h5 class="card-title">@favorite.Products.Price</h5>
+                       
 
-                        <p class="card-text">  @favorite.ProductId </p>
+                        <p class="card-text">  @favorite.Products.Name </p>
                     <a href="#" class="btn btn-primary">Comprar</a>
                     <a href="#" class="btn btn-danger">Remover</a>
                 </div>

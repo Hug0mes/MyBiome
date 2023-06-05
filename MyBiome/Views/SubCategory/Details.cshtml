@@ -1,7 +1,17 @@
 ﻿@model MyBiome.Models.SubCategory
 
 @{
-    ViewData["Title"] = "Details";
+
+    ViewData["Title"] = "ChangePassword";
+
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
 }
 <div style=" padding: 40px;
   margin-top: 40px;">
