@@ -58,6 +58,15 @@ namespace MyBiome.Controllers
             return View(order);
         }
 
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AllOrders()
+        {
+            
+            var order = await _context.Orders
+                .ToListAsync();
+
+            return View(order);
+        }
 
     }
 }

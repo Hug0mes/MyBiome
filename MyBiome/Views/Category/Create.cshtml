@@ -23,14 +23,17 @@
                 </div>
 
             <div class="form-group">
-                <label asp-for="ImageFile" class="control-label"></label>
+              
+                <label class="custom-file-label" for="customFile">Choose file</label>
+  
                 <div class="custom-file">
                     <input asp-for="ImageFile" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
+                 
                 </div>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
-            <button type="submit" value="Create" class="btn btn-primary">Sign in</button>
+            <button type="submit" value="Create" class="btn btn-primary">Create</button>
+            <br />
             </form>
         </div>
     </div>
@@ -49,9 +52,6 @@
             </div>
         </form>*@
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 
 @section Scripts {

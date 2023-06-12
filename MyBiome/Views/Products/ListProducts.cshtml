@@ -25,13 +25,13 @@
 
                     <div class="d-flex sort align-items-center justify-content-lg-end">
                         <strong class="mr-3">Sort by:</strong>
-                        <form action="#">
-                            <select class="" required>
-                                <option value="">Newest Items</option>
-                                <option value="1">Best Selling</option>
-                                <option value="2">Price: Ascending</option>
-                                <option value="2">Price: Descending</option>
-                                <option value="3">Rating(High to Low)</option>
+                    <form asp-action="ListProductsFilter" method="post">
+                        <select name="sortoption" required onchange="this.form.submit()">
+                                <option value="1">Newest Items</option>
+                                <option value="2">Best Selling</option>
+                                <option value="3">Price: Ascending</option>
+                                <option value="4">Price: Descending</option>
+                                <option value="5">Rating(High to Low)</option>
                             </select>
                         </form>
                     </div>
@@ -294,17 +294,3 @@
                 </div>
             </div>
         </div> <!-- /.untree_co-section -->
-@*
-<script>
-    //$(function () {
-    //    $('a.add-to-favorites').click(function (e) {
-    //        e.preventDefault();
-    //        var productId = $(this).data('product-id');
-    //        $.post('/Favorites/AddToFavorite', { productId: productId }, function (data) {
-    //            // faça algo após o produto ser adicionado aos favoritos
-    //        });
-    //    });
-    //});
-
-   
-</script>*@

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MyBiome.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
 

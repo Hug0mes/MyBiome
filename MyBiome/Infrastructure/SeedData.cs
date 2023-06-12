@@ -47,7 +47,7 @@ namespace MyBiome.Infrastructure
 
             if (!context.Users.Any(u => u.UserName == user.UserName))
             {
-                await userManager.CreateAsync(user, "Hugo05gomes!");
+                await userManager.CreateAsync(user, "123");
                 await userManager.AddToRoleAsync(user, "Admin");
             }
         }
@@ -67,14 +67,14 @@ namespace MyBiome.Infrastructure
                     {
                         Name = "Ficus Lyrata Plant " + i.ToString(),
                         Description = "This is a popular and stylish indoor plant with large, shiny leaves shaped like a violin. The plant has an average height of 1 meter and is native to West Africa. The Ficus Lyrata is an easy-to-care-for plant, and is an excellent choice for anyone looking to add a tropical and exotic plant to their home.",
-                        Price = 99,
+                        Price = 2*i,
                         Status = "Active",
                         Height = "30",
                         Whidh = "10",
                         Stock = "5",
                         Image1 = "repeat.png",
                         Image2 = "repeat.png",
-                        Image3 = "repeat.png",
+                        Image3 = "sock-1-min.jpg",
                         SubCategory = rose
                     };
 

@@ -1,0 +1,54 @@
+﻿@model List<Orders>
+@{
+    ViewData["Title"] = "Index";
+
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
+}
+<div style="height:80vh">
+<!-- Recent Sales Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+           <h3 class="mb-0">All Orders</h3>
+         @*   <a href="">Show All</a>*@
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                   
+                        <th scope="col">Date</th>
+                       
+                        <th scope="col">User</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                    <tr>
+                      
+                        <td>@item.OrderDate </td>
+                        
+                        <td>@item.EmailAddress</td>
+                        <td>@item.GrandTotal €</td>
+                        <td>@item.OrderStatus</td>
+                        <td><a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@item.Id">Edit</a></td>
+                    </tr>
+                    }
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->
+</div>

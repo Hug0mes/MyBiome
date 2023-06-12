@@ -36,19 +36,50 @@ namespace MyBiome.Controllers
         }
 
 
-        public async Task<IActionResult> Favorites()
+        public IActionResult Favorites()
         {
-           
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var favorites = await _context.Favorites
-                .Where(f => f.CostumerId == userId)
-                .Include(f => f.Products) // inclui os dados dos produtos
-                .ToListAsync();
 
-            return View(favorites);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            // Recuperar os produtos favoritos do banco de dados para o usuário atualmente autenticado
+            List<Favorites> favoriteItems = _context.Favorites
+                .Where(f => f.CostumerId == userId)
+                .Include(f => f.Products)
+                .ToList();
+
+            // Extrair a lista de IDs dos produtos favoritos
+            List<int> favoriteProductIds = favoriteItems.Select(f => f.ProductId).ToList();
+
+            // Recuperar os detalhes dos produtos favoritos com base nos IDs
+            List<Products> favoriteProducts = _context.Products
+                .Where(p => favoriteProductIds.Contains(p.Id))
+                .ToList();
+
+            // Envia a lista de favoritos para a view
+            return View(favoriteProducts);
         }
 
-        public IActionResult Orders()
+        [HttpPost]
+        public async Task<IActionResult> Remove(int id)
+        {
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var favorite = await _context.Favorites
+                .FirstOrDefaultAsync(f => f.CostumerId == userId && f.ProductId == id);
+
+            if (favorite == null)
+            {
+                return NotFound();
+            }
+
+            _context.Favorites.Remove(favorite);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("favorites", "Dashboard");
+        }
+   
+    public IActionResult Orders()
         {
             return View();
         }

@@ -166,8 +166,25 @@ namespace MyBiome.Controllers
 
 				_context.Orders.Add(orders);
                 await _context.SaveChangesAsync();
-           
-				return RedirectToAction(nameof(Thankyou));
+          
+                int orderId = orders.Id;
+                foreach (var item in cart)
+                {
+                    OrderItems orderItem = new OrderItems
+                    {
+                        OrderId = orderId,
+                        ProductId = item.ProductId,
+                        Quantity = item.Quantity,
+                        Price = item.Price
+                    };
+
+                    _context.OrderItems.Add(orderItem);
+                }
+
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Thankyou));
+
             }
 
             // Se o modelo não for válido, retorne a view com os erros de validação

@@ -1,4 +1,4 @@
-﻿@model MyBiome.Models.Category
+﻿@model MyBiome.Models.Products
 
 @{
     ViewData["Title"] = "Delete";
@@ -10,14 +10,14 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Categoria</h4>
+    <h4>Product</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+                <img style="  background-size: cover;" src=@ImageHelper.GetImageLink(Model.Image1, "products") class="rounded" height="80" width="80" asp-append-version="true" />
         </dd>
     </dl>
     

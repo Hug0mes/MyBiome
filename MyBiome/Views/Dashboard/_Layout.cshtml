@@ -83,7 +83,12 @@
                          
                         </div>
                     </div>
-                        <div class="nav-item dropdown">
+                        
+                    }
+                    @if (@Context.User.IsInRole("Super Admin"))
+                    {
+                        
+                    <div class="nav-item dropdown">
                             <a asp-controller="RolesManager" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-cogs me-2"></i>Roles</a>
                             <div class="dropdown-menu bg-transparent border-0">
                                 <a asp-controller="Userroles" asp-action="index" class="dropdown-item">User Roles</a>
@@ -93,7 +98,7 @@
                         </div>
                      
                     }
-                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="nav-item nav-link"><i class="fa fa-sign-out me-2"></i>Log Out</a>
+                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="nav-item nav-link"><i class="fa fa-times me-2"></i>Log Out</a>
 
                 </div>
             </nav>
@@ -111,16 +116,17 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                   
-                    <a class="nav-link" asp-controller="cart">
+                     <a asp-controller="Home">
+                        <i class="fa fa-home me-lg-2"></i>
+
+                    </a>
+                    <p>   </p>
+                    <a asp-controller="cart">
                         <i class="fa fa-shopping-cart me-lg-2"></i>
                      
                     </a>
 
-                    <a class="nav-link" asp-controller="Home">
-                        <i class="fa fa-home me-lg-2"></i>
-
-                    </a>
+                  
                   
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -129,6 +135,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a class="dropdown-item">My Profile</a>
+                            <p> </p>
                             <a class="dropdown-item">Settings</a>
                             <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="dropdown-item">Log Out</a>
                         </div>

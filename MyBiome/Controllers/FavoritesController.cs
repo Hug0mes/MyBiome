@@ -41,11 +41,13 @@ namespace MyBiome.Controllers
                 .Include(f => f.Products)
                 .ToList();
 
-            // Extrair a lista de produtos favoritos dos itens favoritos
-            List<Products> favoriteProducts = favoriteItems.Select(f => f.Products).ToList();
+            // Extrair a lista de IDs dos produtos favoritos
+            List<int> favoriteProductIds = favoriteItems.Select(f => f.Products.Id).ToList();
 
-
-
+            // Recuperar os detalhes dos produtos favoritos com base nos IDs
+            List<Products> favoriteProducts = _context.Products
+                .Where(p => favoriteProductIds.Contains(p.Id))
+                .ToList();
 
             // Envia a lista de favoritos para a view
             return View(favoriteProducts);
@@ -81,7 +83,11 @@ namespace MyBiome.Controllers
         [HttpPost]
         public async Task<IActionResult> Remove(int id)
         {
-            var favorite = await _context.Favorites.FindAsync(id);
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var favorite = await _context.Favorites
+                .FirstOrDefaultAsync(f => f.CostumerId == userId && f.ProductId == id);
 
             if (favorite == null)
             {
@@ -91,7 +97,7 @@ namespace MyBiome.Controllers
             _context.Favorites.Remove(favorite);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index", new { customerId = favorite.CostumerId });
+            return RedirectToAction("favorites", "Dashboard");
         }
     }
 

@@ -18,7 +18,7 @@ namespace MyBiome.Controllers
         private readonly IToastNotification _toastNotification;
         private readonly string _imageFolder;
 
- 
+
         public ProductsController(DataContext context, IWebHostEnvironment appEnvironment, IToastNotification toastNotification, UserManager<AppUser> userManager)
         {
             _context = context;
@@ -39,13 +39,13 @@ namespace MyBiome.Controllers
         // GET: Products1
         public IActionResult ListProducts()
         {
-            var user = _userManager.GetUserAsync(User);
-         
 
-            List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
+
+
+            List<Products> products = _context.Products.Include(p => p.SubCategory).Where(p => p.Status == "Active").ToList();
             List<Category> categories = _context.Categories.ToList();
-            //List<Favorites> favorites = _context.Favorites.Where(p => p.CostumerId = user.Id).ToList();
-  
+
+        
 
             ProductsViewModel viewModel = new ProductsViewModel()
             {
@@ -66,9 +66,9 @@ namespace MyBiome.Controllers
             }
 
             var product = await _context.Products
-				.Include(p => p.SubCategory)
-				.Include(p => p.SubCategory.Category)
-				.FirstOrDefaultAsync(m => m.Id == id);
+                .Include(p => p.SubCategory)
+                .Include(p => p.SubCategory.Category)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();
@@ -93,9 +93,9 @@ namespace MyBiome.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( ProductsViewModel ProductsVM)
+        public async Task<IActionResult> Create(ProductsViewModel ProductsVM)
         {
-           
+
             if (ModelState.IsValid)
             {
 
@@ -107,7 +107,7 @@ namespace MyBiome.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-        
+
             return View(ProductsVM);
         }
 
@@ -119,75 +119,15 @@ namespace MyBiome.Controllers
                 return NotFound();
             }
 
-           var product = await _context.Products.FindAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
-
-        // POST: Products/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Descri,Price,Status,Height,Whidh,Stock,Image1,Image2,Image3")] Products products)
-        {
-            if (id != products.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(products);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductExists(products.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(products);
-        }
-
-        // GET: Products/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return View(product);
-        }
-
-        // POST: Products/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
             var product = await _context.Products.FindAsync(id);
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
         }
+
+
 
         private bool ProductExists(int id)
         {
@@ -196,7 +136,7 @@ namespace MyBiome.Controllers
 
         public IActionResult Moredetails()
         {
-       
+
             return View();
         }
 
@@ -218,7 +158,7 @@ namespace MyBiome.Controllers
                     }
                     // Set filename image in Artigo
                     ProductsVM.Products.Image1 = uniqueFileName1;
-                  
+
                 }
 
                 string uniqueFileName2 = UploadedFile2(ProductsVM);
@@ -263,8 +203,8 @@ namespace MyBiome.Controllers
                     //_context.Entry(Products.Products).State = EntityState.Modified;
                     _context.Update(ProductsVM.Products);
                 }
-               
-               
+
+
                 // Store everything in db
                 await _context.SaveChangesAsync();
 
@@ -340,6 +280,54 @@ namespace MyBiome.Controllers
             var subcategories = _context.SubCategories.Where(s => s.CategoryId == categoryId).ToList();
             return Json(subcategories);
         }
+
+
+
+        public ActionResult ListProductsFilter(int sortoption)
+        {
+            // Obtenha a lista de produtos do seu modelo
+            List<Products> productsList = _context.Products.ToList();
+            // Aplique a lógica de filtragem com base no valor de SortOption
+            if (sortoption == 1)
+            {
+                // Ordenar por melhores vendas
+                productsList = productsList.OrderByDescending(p => p.Stock).ToList();
+            }
+            else if (sortoption == 2)
+            {
+                // Ordenar por preço crescente
+                productsList = productsList.OrderBy(p => p.Price).Where(p => p.Status == "Active").ToList();
+            }
+            else if (sortoption == 3)
+            {
+                // Ordenar por preço decrescente
+                productsList = productsList.OrderByDescending(p => p.Price).Where(p => p.Status == "Active").ToList();
+            }
+            else if (sortoption == 4)
+            {
+                // Ordenar por classificação alta para baixa
+                productsList = productsList.Where(p => p.Status == "Active").ToList();
+            }
+            else
+            {
+                // Ordenar por itens mais recentes (opção padrão)
+                productsList = productsList.Where(p => p.Status == "Inactive").ToList();
+            }
+
+            // Outras lógicas relevantes...
+            List<Category> categories = _context.Categories.ToList();
+
+
+            ProductsViewModel viewModel = new ProductsViewModel()
+            {
+                ProductsList = productsList,
+                Categories = categories
+                //,
+                //favorites = favorites
+            };
+            return View("ListProducts",viewModel);
+        }
+
 
     }
 }
