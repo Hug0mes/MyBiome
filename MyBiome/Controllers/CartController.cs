@@ -159,7 +159,7 @@ namespace MyBiome.Controllers
 
                 orders.UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 orders.CartItems = cart;
-                orders.OrderStatus = "Active";
+                orders.OrderStatus = "pending";
                 orders.OrderDate = DateTime.Now;
                 orders.GrandTotal = cart.Sum(x => x.Quantity * x.Price);
 

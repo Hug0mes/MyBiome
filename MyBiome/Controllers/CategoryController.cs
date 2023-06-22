@@ -57,7 +57,7 @@ namespace YourNamespace.Controllers
 
         // POST: Category/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CategoryViewModel categoryVM)
         {
             if (ModelState.IsValid)

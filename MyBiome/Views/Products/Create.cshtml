@@ -92,20 +92,14 @@
                     <span asp-validation-for="ImageFile3" class="text-danger"></span>
                 </div>
 
-                    <div class="form-group">
-                        <label asp-for="Products.SubCategoryId" class="control-label"></label>
-                        <div class="input-group">
-                            <select class="form-control" asp-for="Products.SubCategoryId"
-                                asp-items="@(new SelectList(ViewBag.scatList,"Value","Text"))">
-                                <option>Selecione uma opção</option>
-                            </select>
-                            
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#progressBarCenter" id="refreshCategorias">Atualizar</button>
-                        </div>
-
-                        <span asp-validation-for="Products.SubCategoryId" class="text-danger"></span>
-                    </div>
-
+                  <div class="form-group">
+                      <label asp-for="Products.SubCategoryId" class="control-label"></label>
+                      <div class="input-group">
+                           <select class="form-control" asp-for="Products.SubCategoryId" asp-items="@(new SelectList(ViewBag.scatList, "Value", "Text"))" placeholder="Selecione uma opção"></select>
+                      </div>
+                      <span asp-validation-for="Products.SubCategoryId" class="text-danger"></span>
+                  </div>
+                       <br />
 
 
                 <div class="form-group">

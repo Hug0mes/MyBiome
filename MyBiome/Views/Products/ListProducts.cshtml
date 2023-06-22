@@ -17,26 +17,39 @@
     <div class="untree_co-section pt-3">
         <div class="container">
 
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="mb-3 mb-lg-0">Products</h2>
-                </div>
-                <div class="col-lg-4">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-3">
+                <h2 class="mb-3 mb-lg-0">Products</h2>
+            </div>
 
-                    <div class="d-flex sort align-items-center justify-content-lg-end">
-                        <strong class="mr-3">Sort by:</strong>
-                    <form asp-action="ListProductsFilter" method="post">
-                        <select name="sortoption" required onchange="this.form.submit()">
-                                <option value="1">Newest Items</option>
-                                <option value="2">Best Selling</option>
-                                <option value="3">Price: Ascending</option>
-                                <option value="4">Price: Descending</option>
-                                <option value="5">Rating(High to Low)</option>
-                            </select>
-                        </form>
+            <div class="col-lg-5 bg-light" >
+                <form method="get">
+                <div class="input-group mb-3" style="top:10px">
+                    <input type="text" id="searchString" name="searchString" class="form-control custom-input" placeholder="Search" value="@Context.Request.Query["searchString"]">
+                    <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" id="searchButton" type="submit">Search</button>
                     </div>
                 </div>
+            </form>
             </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="d-flex sort align-items-center justify-content-lg-end">
+                    <strong class="mr-3">Sort by:</strong>
+                    <form asp-action="ListProductsFilter" method="post">
+                        <select name="sortoption" required onchange="this.form.submit()">
+                            <option value="1">Newest Items</option>
+                            <option value="2">Best Selling</option>
+                            <option value="3">Price: Ascending</option>
+                            <option value="4">Price: Descending</option>
+                            <option value="5">Rating(High to Low)</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
 
             <div class="row">
 
@@ -66,7 +79,17 @@
                     <div class="row">
                         @if (Model.ProductsList != null && Model.ProductsList.Any())
                         {
-                            @foreach (var products in Model.ProductsList)
+                              string searchString = Context.Request.Query["searchString"];
+                        var filteredProducts = Model.ProductsList.Where(p =>
+                       string.IsNullOrEmpty(searchString) ||
+                       p.Name.Contains(searchString) ||
+                       p.Price.ToString().Contains(searchString) ||
+                       p.SubCategory?.Category?.Name.Contains(searchString) == true).ToList();
+
+                        @if (filteredProducts.Any())
+                        {
+
+                            @foreach (var products in filteredProducts)
                             {
 
                                 <div class="col-6 col-sm-6 col-md-6 mb-4 col-lg-4">
@@ -77,25 +100,7 @@
 
                                             <a asp-controller="Cart" asp-action="Add" asp-route-id="@products.Id"> <img style="width: 19px; height: 19px; opacity:0.8;  box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.5);;" src="~/images/icons/cart.png"></img></a>
                                             <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
-                                        @*    @if (User.Identity.IsAuthenticated)
-                                            {*@
-                                                
-                                                 @*   @if (Model.favorites.Any(p => p.Id == products.Id))
-                                                    {
-                                                        
-                                            //coração
-                                                    }else{
-                                                        <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/filled_heart.png"></img></a>
-                                               }*@
-
-                                          @*  }else
-                                            {
-                                                
-                                                <a asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@products.Id"><img style="width: 19px; height: 19px;" src="~/images/icons/empty_heart.png"></img></a>
-                     
-                                            }*@
-
-                                               
+                                  
                                         </div>  
                                     </div>
                                         <a asp-action="Details" asp-route-id="@products.Id" class="product-img">
@@ -116,39 +121,13 @@
                         }
                         else
                         {
-                            <p>No products found.</p>
+                            <p> No products matching your search </p>
                         }
-                       
-                    </div>
-
-                    <div class="row mt-5 pb-5">
-                        <div class="col-lg-12">
-                            <div class="custom-pagination">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z" />
-                                                <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="active"><span>1</span></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                                <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    }
+                    else
+                    {
+                        <p>No Products found.</p>
+                    }
                     </div>
 
 
@@ -160,7 +139,7 @@
             <div class="container">
                 <div class="row mb-5 align-items-center">
                     <div class="col-md-6">
-                        <h2 class="h3">Popular Items</h2>
+                        <h2 class="h3">Latest items</h2>
                     </div>
                     <div class="col-sm-6 carousel-nav text-sm-right">
                         <a href="#" class="prev js-custom-prev-v2">
@@ -180,72 +159,28 @@
                     </div>
                 </div> <!-- /.heading -->
                 <div class="owl-3-slider owl-carousel">
+
+                    @foreach (var products in Model.ProductsList.Take(7))
+                            {
                     <div class="item">
                         <div class="product-item">
-                            <a href="shop-single.html" class="product-img">
+                            <a asp-controller="Products" asp-action="details" asp-route-id="@products.Id" class="product-img">
                                 <div class="label sale top-right">
-                                    <div class='content'>Sale</div>
-                                </div>
-                                <img src="images/products/watch-1-min.jpg" alt="Image" class="img-fluid">
-                            </a>
-                            <h3 class="title"><a href="#">The Murray</a></h3>
-                            <div class="price">
-                                <del>£99.00</del> &mdash; <span>£69.00</span>
-                            </div>
-                        </div>
-                    </div> <!-- /.item -->
-
-
-                    <div class="item">
-                        <div class="product-item">
-                            <a href="shop-single.html" class="product-img">
-
-                                <div class="label new top-right">
                                     <div class='content'>New</div>
                                 </div>
-
-
-                                <img src="images/products/jacket-1-min.jpg" alt="Image" class="img-fluid">
-                            </a>
-                            <h3 class="title"><a href="#">Dark Jacket</a></h3>
-                            <div class="price">
-                                <span>£69.00</span>
-                            </div>
-                        </div>
-                    </div> <!-- /.item -->
-
-
-                    <div class="item">
-                        <div class="product-item">
-                            <a href="shop-single.html" class="product-img">
-                                <div class="label new top-right">
-                                    <div class='content'>New</div>
+                                <div style="width: 240px; height: 240px; display: flex; align-items: center; justify-content: center;">
+                                <img src=@ImageHelper.GetImageLink(products.Image1, "products") asp-append-version="true" alt="Image" class="img-fluid" style="object-fit:contain; align-content:center; margin-left:80px ;max-width: 100%; max-height: 100%;">
                                 </div>
-
-                                <div class="label sale top-right second">
-                                    <div class='content'>Sale</div>
-                                </div>
-                                <img src="images/products/bottoms-1-min.jpg" alt="Image" class="img-fluid">
                             </a>
-                            <h3 class="title"><a href="#">Chino Bottoms</a></h3>
+                            <h3 class="title"><a asp-controller="Products" asp-action="details" asp-route-id="@products.Id">@products.Name</a></h3>
                             <div class="price">
-                                <del>£99.00</del> &mdash; <span>£69.00</span>
+                                 <span>@products.Price€</span>
                             </div>
                         </div>
                     </div> <!-- /.item -->
+                    }
 
-                    <div class="item">
-                        <div class="product-item">
-                            <a href="shop-single.html" class="product-img">
-                                <img src="images/products/sock-1-min.jpg" alt="Image" class="img-fluid">
-                            </a>
-                            <h3 class="title"><a href="#">The Modern Sock</a></h3>
-                            <div class="price">
-                                <span>£29.00</span>
-                            </div>
-                        </div>
-                    </div> <!-- /.item -->
-
+                   
                 </div>
             </div> <!-- /.container -->
         </div> <!-- /.untree_co-section -->

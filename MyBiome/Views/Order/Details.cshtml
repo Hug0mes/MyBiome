@@ -1,4 +1,4 @@
-﻿@model MyBiome.Models.Orders
+﻿@model MyOrdersViewModel
 
 @{
 
@@ -13,26 +13,56 @@
         Layout = "/Views/Dashboard/_Layout.cshtml";
     }
 }
+<h2>Order Details</h2>
 
-<h1>Detail</h1>
 
-<div>
-    <h4> @Model.Id </h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Model.OrderDate
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FirstName)  @Html.DisplayFor(model => model.LastName)
-        </dd>
-    </dl>
+<div class="card">
+    <div class="card-header">
+        ID: @Model.Orders.Id | @Model.Orders.OrderStatus...
+    </div>
+    <div class="card-body">
+        <p>Date: @Model.Orders.OrderDate</p>
+        <p>Total: @Model.Orders.GrandTotal €</p>
+        <p>Sent to: @Model.Orders.Country | @Model.Orders.Adress </p>
+
+        <p>Notes: @Model.Orders.OrderNotes </p>
+
+        <h6>Contact</h6>
+        <p>Phone: @Model.Orders.Phone </p>
+        <p>Email: @Model.Orders.EmailAddress </p>
+
+    </div>
 </div>
-        @foreach (var products in Model.CartItems)
+
+<hr />
+
+<h2>Order Items</h2>
+<div class="row">
+        @for (int i = 0; i < Model.Products.Count; i++)
         {
-             @products.Id
+            var product = Model.Products[i];
+            var quantity = Model.Quantities[i];
+
+
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+            <div class="card mb-4">
+                <a asp-controller="Products" asp-action="details" asp-route-id="@product.Id">
+                    <div style="width: 100%; height: 240px;">
+                        <img src="@ImageHelper.GetImageLink(product.Image1, "products")" class="card-img-top img-fluid" style="object-fit: contain; height: 100%;" alt="@product.Name" asp-append-version="true" />
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text"><strong>Quantity:</strong> @quantity</p>
+                    <p class="card-text"><strong>Price:</strong> @product.Price€</p>
+                </div>
+            </div>
+        </div>
+ 
         }
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+</div>
+
+<div class="mt-4">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>

@@ -17,56 +17,69 @@
     <a asp-action="Create">Create New</a>
 </p>
 <form method="get">
-    <p>
-        <input type="text" name="searchString">
-        <input type="submit" value="Filter" />
-    </p>
+    <div class="input-group mb-3">
+        <input type="text" id="searchString" name="searchString" class="form-control" placeholder="Search" value="@Context.Request.Query["searchString"]">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
 </form>
 
 @if (Model != null && Model.Any())
 {
-    <table class="table">
-        <thead>
-            <tr>
 
-                <th>Name</th>
-                <th>Image1</th>
-                <th>Price</th>
-                <th>Height</th>
-                <th>Whidh<th>
-                <th>Category</th>
-                <th>SubCategory</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var products in Model)
-            {
+        string searchString = Context.Request.Query["searchString"];
+    var filteredProducts = Model.Where(p =>
+   string.IsNullOrEmpty(searchString) ||
+   p.Name.Contains(searchString) ||
+   p.Price.ToString().Contains(searchString) ||
+   p.SubCategory?.Category?.Name.Contains(searchString) == true).ToList();
+
+
+    @if (filteredProducts.Any())
+    {
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>@products.Name</td>
-                    <td>
-                        <img style="background-size: cover;" src=@ImageHelper.GetImageLink(products.Image1, "products") class="rounded" height="80" width="80" asp-append-version="true" />
-                    </td>
-                    <td>@products.Price</td>
-                    <td>@products.Height</td>
-                    <td>@products.Whidh</td>
-                    <td>@products.SubCategory?.Category?.Name</td>
-                    <td>@products.SubCategory?.Name</td>
-                    <td>@products.Status</td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@products.Id">Details</a> |
-                        <a asp-action="Edit" asp-route-id="@products.Id">Edit</a> |
-                        <a asp-controller="Products" asp-action="inative" asp-route-id="@products.Id">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                    <th>Name</th>
+                    <th>Image1</th>
+                    <th>Price</th>
+                    <th>Size</th>
+                    <th>Stock</th>
+                    <th>Category</th>
+                    <th>SubCategory</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr> 
+            </thead>
+            <tbody>
+                @foreach (var product in filteredProducts)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>
+                            <img class="rounded" src="@ImageHelper.GetImageLink(product.Image1, "products")" height="70" width="auto" asp-append-version="true" />
+                        </td>
+                        <td>@product.Price</td>
+                        <td>@product.Height x @product.Whidh</td>
+                        <td>@product.Stock</td>
+                        <td>@product.SubCategory?.Category?.Name</td>
+                        <td>@product.SubCategory?.Name</td>
+                        <td>@product.Status</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="Details" asp-route-id="@product.Id">Details</a>
+                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@product.Id">Edit</a>
+                            <a class="btn btn-danger" asp-controller="Products" asp-action="Delete" asp-route-id="@product.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Products found.</p>
+    }
 }
 else
 {
-    <p>No subcategories found.</p>
+    <p>No Products found.</p>
 }
-
- 

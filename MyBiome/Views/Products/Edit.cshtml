@@ -1,7 +1,6 @@
-﻿@model Products
-
+﻿@model MyBiome.Models.ProductsViewModel;
 @{
-    ViewData["Title"] = "Dashboard";
+    ViewBag.Title = "Edit";
 
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
@@ -13,82 +12,166 @@
     }
 }
 
-
-<h2>Edit Product</h2>
-
-<form asp-action="Edit">
-    <input type="hidden" asp-for="Id" />
-
-    <div class="form-group">
-        <label asp-for="Name">Name</label>
-        <input class="form-control" asp-for="Name" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Edit Product</h2>
+            <hr />
+        </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.HiddenFor(m => m.Products.Id)
 
-    <div class="form-group">
-        <label asp-for="Description">Description</label>
-        <input class="form-control" asp-for="Description" type="text"/>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Name)
+                    @Html.TextBoxFor(m => m.Products.Name, new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Price">Price</label>
-        <input class="form-control" asp-for="Price" type="text" />
-     @*   <span asp-validation-for="Price" class="text-danger"></span>*@
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Description)
+                    @Html.TextAreaFor(m => m.Products.Description, new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Status">Status</label>
-        <input class="form-control" asp-for="Status" />
-        <span asp-validation-for="Status" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Price)
+                    @Html.TextBoxFor(m => m.Products.Price, new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Height">Height</label>
-        <input class="form-control" asp-for="Height" type="number" />
-        <span asp-validation-for="Height" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Status)
+                    @Html.DropDownListFor(m => m.Products.Status, new List<SelectListItem>
+                {
+                new SelectListItem { Text = "Active", Value = "Active" },
+                new SelectListItem { Text = "Inactive", Value = "Inactive" },
+                }, "Select Status", new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Whidh">Width</label>
-        <input class="form-control" asp-for="Whidh" type="number"/>
-        <span asp-validation-for="Whidh" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Height)
+                    @Html.TextBoxFor(m => m.Products.Height, new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Stock">Stock</label>
-        <input class="form-control" asp-for="Stock" type="number"/>
-        <span asp-validation-for="Stock" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Whidh)
+                    @Html.TextBoxFor(m => m.Products.Whidh, new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Image1">Image 1</label>
-        <input class="form-control" asp-for="Image1" type="file"/>
-        <span asp-validation-for="Image1" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Products.Stock)
+                    @Html.TextBoxFor(m => m.Products.Stock, new { @class = "form-control" })
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Image2">Image 2</label>
-        <input class="form-control" asp-for="Image2"  type="file" />
-        <span asp-validation-for="Image2" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    <label class="control-label">Details Image </label>
+                    <div class="custom-file">
+                        <input asp-for="ImageFile1" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    <span asp-validation-for="ImageFile1" class="text-danger"></span>
+                </div>
 
-    <div class="form-group">
-        <label asp-for="Image3">Image 3</label>
-        <input class="form-control" asp-for="Image3"  type="file" />
-        <span asp-validation-for="Image3" class="text-danger"></span>
-    </div>
+                <div class="form-group">
+                    <label class="control-label">Details Image </label>
+                    <div class="custom-file">
+                        <input asp-for="ImageFile2" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    <span asp-validation-for="ImageFile2" class="text-danger"></span>
+                </div>
 
-    <div class="form-group">
-        <input type="submit" value="Save" class="btn btn-primary" />
-        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                <div class="form-group">
+                    <label class="control-label">Other...</label>
+                    <div class="custom-file">
+                        <input asp-for="ImageFile3" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    <span asp-validation-for="ImageFile3" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Products.SubCategoryId" class="control-label"></label>
+                    <div class="input-group">
+                        <select class="form-control" asp-for="Products.SubCategoryId"
+                            asp-items="@(new SelectList(ViewBag.scatList,"Value","Text"))">
+                            <option>Selecione uma opção</option>
+                        </select>
+
+                        @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#progressBarCenter" id="refreshCategorias">Atualizar</button>*@
+                    </div>
+
+                    <span asp-validation-for="Products.SubCategoryId" class="text-danger"></span>
+                    <br />
+                </div> 
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-success" />
+                    <a href="@Url.Action("Index")" class="btn btn-default">Back to List</a>
+                </div>
+            }
+        </div>
     </div>
-</form>
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+<script>
+    $(document).ready(function () {
+        loadCategories();
+
+        $("#refreshCategories").click(function () {
+            loadCategories();
+        });
+    });
+
+    function loadCategories() {
+        $.ajax({
+            type: "GET",
+            url: "/api/Categories",
+            data: "{}",
+            success: function (data) {
+                var s = '';
+                for (var i = 0; i < data.length; i++) {
+                    s += '<label class="checkbox">';
+                    s += '<input type="checkbox" name="categoriesSelectedIds" value="' + data[i].id + '">';
+                    s += '<span>' + data[i].nome + '</span>';
+                    s += '</label>';
+                }
+                $(".checkbox-list").html(s);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $('#CategoryId').change(function () {
+            var categoryId = $(this).val();
+            if (categoryId != '') {
+                $.ajax({
+                    url: '/Products/GetSubCategories',
+                    type: 'GET',
+                    dataType: 'json',
+                    data: { categoryId: categoryId },
+                    success: function (data) {
+                        var options = '<option value="">-- Select a subcategory --</option>';
+                        $.each(data, function (index, subcategory) {
+                            options += '<option value="' + subcategory.Id + '">' + subcategory.Name + '</option>';
+                        });
+                        $('#SubCategoryId').html(options);
+                    },
+                    error: function () {
+                        alert('An error occurred while loading the subcategories.');
+                    }
+                });
+            } else {
+                $('#SubCategoryId').html('<option value="">-- Select a subcategory --</option>');
+            }
+        });
+    });
+</script>

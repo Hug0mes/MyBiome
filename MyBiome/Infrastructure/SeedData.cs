@@ -24,7 +24,7 @@ namespace MyBiome.Infrastructure
 
         private static async Task SeedRoles(DataContext context, RoleManager<IdentityRole> roleManager)
         {
-            string[] roles = new string[] { "Admin", "Customer" };
+            string[] roles = new string[] { "Admin", "Customer","Super Admin" };
 
             foreach (string role in roles)
             {
@@ -41,17 +41,16 @@ namespace MyBiome.Infrastructure
             {
                 UserName = "admin",
                 Email = "2005hugogomes@gmail.com",
-                EmailConfirmed = true, 
+                EmailConfirmed = true,
                 SecurityStamp = Guid.NewGuid().ToString("D")
             };
 
             if (!context.Users.Any(u => u.UserName == user.UserName))
             {
                 await userManager.CreateAsync(user, "123");
-                await userManager.AddToRoleAsync(user, "Admin");
+                //await userManager.AddToRoleAsync(user, "Admin5");
             }
         }
-
         private static async Task SeedModel(DataContext context)
         {
             if (!context.Products.Any())

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,7 +49,7 @@
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="ms-3">
-                        <img src="~/images/icons/aesthetic-flower-plant-leaves.png" alt="" style="width: auto; height: 105px; left: 130px">
+                        <a asp-controller="dashboard" asp-action="index"> <img src="~/images/icons/aesthetic-flower-plant-leaves.png" alt="" style="width: auto; height: 105px; left: 160px"></a>
                     </div>
                        
                 </div>
@@ -57,7 +58,7 @@
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Account</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a class="dropdown-item">Change Email</a>
+                
                             <a asp-controller="Account" asp-action="changePassword" class="dropdown-item">Change password</a>
                           
                         </div>
@@ -67,10 +68,12 @@
               
                     @if(@Context.User.IsInRole("Admin")){
 
+                        <a asp-controller="order" asp-action="AllOrders" class="nav-item nav-link"><i class="fa fa-list-ul me-2"></i> Manage Orders </a>
+
                     <div class="nav-item dropdown">
                             <a asp-controller="Category" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th-large me-2"></i>Categories</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-controller="Category" asp-action="create"  class="dropdown-item">Add Categorie</a>
+                            <a asp-controller="Category" asp-action="index"  class="dropdown-item">Categories</a>
                             <a asp-controller="SubCategory" asp-action="index" class="dropdown-item">SubCategories</a>
                           
                         </div>
@@ -92,7 +95,7 @@
                             <a asp-controller="RolesManager" asp-action="index" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-cogs me-2"></i>Roles</a>
                             <div class="dropdown-menu bg-transparent border-0">
                                 <a asp-controller="Userroles" asp-action="index" class="dropdown-item">User Roles</a>
-                                <a asp-controller="RoleManager" asp-action="index" class="dropdown-item">Menage Roles</a>
+                                <a asp-controller="RoleManager" asp-action="index" class="dropdown-item">Manage Roles</a>
 
                             </div>
                         </div>

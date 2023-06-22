@@ -32,7 +32,9 @@ namespace MyBiome.Controllers
         // GET: Products
         public IActionResult Index()
         {
-            List<Products> products = _context.Products.Include(p => p.SubCategory).ToList();
+            List<Products> products = _context.Products
+                .Include(p => p.SubCategory)
+                .Include(p => p.SubCategory.Category).ToList();
             return View(products);
         }
 
@@ -85,8 +87,15 @@ namespace MyBiome.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            IEnumerable<SelectListItem> scatList = DBHelper.FillSubCategories(_context);
-            ViewBag.scatList = scatList;
+            //IEnumerable<SelectListItem> scatList = DBHelper.FillSubCategories(_context);
+            //ViewBag.scatList = scatList;
+            ViewBag.scatList = _context.SubCategories
+               .Select(x => new SelectListItem
+               {
+                   Value = x.Id.ToString(),
+                   Text = x.Name
+               })
+               .ToList();
             return View();
         }
 
@@ -111,21 +120,76 @@ namespace MyBiome.Controllers
             return View(ProductsVM);
         }
 
-        // GET: Products/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        [HttpGet]
+        public IActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            // Obtenha o produto pelo ID do banco de dados
+            var product = _context.Products.Find(id);
 
-            var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
                 return NotFound();
             }
-            return View(product);
+
+            // Crie o objeto ProductsViewModel e defina suas propriedades com os dados do produto
+            var viewModel = new ProductsViewModel
+            {
+                Products = product
+            };
+
+            // Preencha a lista de categorias para o dropdown
+            ViewBag.scatList = _context.SubCategories
+                .Select(x => new SelectListItem
+                {
+                    Value = x.Id.ToString(),
+                    Text = x.Name
+                })
+                .ToList();
+
+            return View(viewModel);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> EditAsync(ProductsViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                // Obtenha o produto original do banco de dados
+                var product = _context.Products.Find(viewModel.Products.Id);
+
+                if (product == null)
+                {
+                    return NotFound();
+                }
+
+                // Atualize as propriedades do produto com os dados do view model
+                product.Name = viewModel.Products.Name;
+                product.Description = viewModel.Products.Description;
+                product.Price = viewModel.Products.Price;
+                product.Status = viewModel.Products.Status;
+                product.Height = viewModel.Products.Height;
+                product.Whidh = viewModel.Products.Whidh;
+                product.Stock = viewModel.Products.Stock;
+
+                // Atualize outras propriedades, se necessário
+                await SaveProduct(viewModel);
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            // Preencha a lista de categorias para o dropdown
+            ViewBag.scatList = _context.SubCategories
+                .Select(x => new SelectListItem
+                {
+                    Value = x.Id.ToString(),
+                    Text = x.Name
+                })
+                .ToList();
+
+            return View(viewModel);
+        }
+
 
 
 
@@ -138,6 +202,18 @@ namespace MyBiome.Controllers
         {
 
             return View();
+        }
+        
+        public IActionResult delete(int id)
+        {
+            var product =  _context.Products.Find(id);
+            if (product != null)
+            {
+                product.Status = "Inactive";
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Index"); // Redireciona para a página principal ou ação desejada após a inativação do produto
         }
 
         private async Task<bool> SaveProduct(ProductsViewModel ProductsVM)
@@ -286,7 +362,7 @@ namespace MyBiome.Controllers
         public ActionResult ListProductsFilter(int sortoption)
         {
             // Obtenha a lista de produtos do seu modelo
-            List<Products> productsList = _context.Products.ToList();
+            List<Products> productsList = _context.Products.Where(p => p.Status == "Active").ToList();
             // Aplique a lógica de filtragem com base no valor de SortOption
             if (sortoption == 1)
             {
@@ -296,22 +372,22 @@ namespace MyBiome.Controllers
             else if (sortoption == 2)
             {
                 // Ordenar por preço crescente
-                productsList = productsList.OrderBy(p => p.Price).Where(p => p.Status == "Active").ToList();
+                productsList = productsList.OrderBy(p => p.Price).ToList();
             }
             else if (sortoption == 3)
             {
                 // Ordenar por preço decrescente
-                productsList = productsList.OrderByDescending(p => p.Price).Where(p => p.Status == "Active").ToList();
+                productsList = productsList.OrderByDescending(p => p.Price).ToList();
             }
             else if (sortoption == 4)
             {
                 // Ordenar por classificação alta para baixa
-                productsList = productsList.Where(p => p.Status == "Active").ToList();
+                productsList = productsList.ToList();
             }
             else
             {
                 // Ordenar por itens mais recentes (opção padrão)
-                productsList = productsList.Where(p => p.Status == "Inactive").ToList();
+                productsList = productsList.ToList();
             }
 
             // Outras lógicas relevantes...

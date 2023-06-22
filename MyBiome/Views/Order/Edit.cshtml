@@ -1,0 +1,61 @@
+﻿@model MyBiome.Models.Orders
+
+@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Views/Dashboard/_Layout.cshtml";
+    }
+}
+
+<h2>Order Details</h2>
+
+<div class="card">
+    <div class="card-header">
+        ID: @Model.Id | @Model.OrderStatus...
+    </div>
+    <div class="card-body">
+        <p>Date: @Model.OrderDate</p>
+        <p>Total: @Model.GrandTotal €</p>
+        <p>Sent to: @Model.Country | @Model.Adress </p>
+   
+        <p>Notes: @Model.OrderNotes </p>
+   
+        <h6>Contact</h6>
+        <p>Phone: @Model.Phone </p>
+        <p>Email: @Model.EmailAddress </p>
+
+    </div>
+</div>
+
+<hr />
+
+
+
+
+<!-- Display order information here -->
+
+<h3>Update Status</h3>
+@using (Html.BeginForm("edit", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+    <div class="form-group">
+        <label for="status" class="mr-2">Status:</label>
+        <select asp-for="OrderStatus" name="status" id="status" class="form-control">
+            <option value="pending">Pending</option>
+            <option value="processing">Processing</option>
+            <option value="shipped">Shipped</option>
+            <option value="delivered">Delivered</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update Status</button>
+    <br />
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

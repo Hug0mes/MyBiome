@@ -27,17 +27,14 @@
 				<br/>
 				<h2> @Html.DisplayFor(model => model.Name)</h2>
 				<h6 class="text-muted">@Html.DisplayFor(model => model.SubCategory.Category.Name) > @Html.DisplayFor(model => model.SubCategory.Name)</h6>
+				<h6 class="text-muted"> @Model.Height x @Model.Whidh</h6>
 				<p class="description"> @Html.DisplayFor(model => model.Description)</p>
-				<p class="price"> @Html.DisplayFor(model => model.Price)€ </p>
+				<h5 class="price"> @Html.DisplayFor(model => model.Price)€ </h5>
 				<a class="btn btn-primary btn-sm" asp-controller="Cart" asp-action="Add"  asp-route-id="@Model.Id" >Add to cart</a>
 				  
-				<button class="btn btn-primary btn-sm" onclick="buyNow(@Model.Id)">Buy now</button>
+				<button class="btn btn-primary btn-sm" asp-controller="Favorites" asp-action="AddToFavorite" asp-route-id="@Model.Id">Add to favorites</button>
 			</div>
 		</div>
 	</div>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
 </div>
