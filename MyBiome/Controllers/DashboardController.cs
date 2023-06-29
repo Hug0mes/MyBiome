@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyBiome.Infrastructure;
 using MyBiome.Models;
+using System.Linq;
 using System.Security.Claims;
 
 namespace MyBiome.Controllers
@@ -27,6 +28,26 @@ namespace MyBiome.Controllers
         [Authorize]
         public IActionResult Index()
         {
+            var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            ViewBag.TotalPurchases = _context.Orders.Where(t => t.UserId == id).Count();
+
+           
+
+            if(_context.Orders.Where(t => t.UserId == id).Count() > 0)
+            {
+                ViewBag.AveragePurchases = (int)_context.Orders.Where(t => t.UserId == id).Average(t => t.GrandTotal);
+            }
+            else
+            {
+                ViewBag.AveragePurchases = 0;
+            }
+
+            ViewBag.O2saved = _context.Orders.Where(t => t.UserId == id).Count()*1.2 ;
+
+            ViewBag.TotalPlants = _context.Products.Count();
+
+
             return View();
         }
 

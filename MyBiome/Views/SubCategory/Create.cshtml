@@ -31,10 +31,10 @@
                 <div class="input-group">
                     <select class="form-control" asp-for="CategoryId"
                             asp-items="@(new SelectList(ViewBag.catList,"Value","Text"))">
-                        <option>Selecione uma opção</option>
+                    <option>select an option</option>
                     </select>
                     
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#progressBarCenter" id="refreshCategorias">Atualizar</button>
+                 
                 </div>
 
                 <span asp-validation-for="CategoryId" class="text-danger"></span>

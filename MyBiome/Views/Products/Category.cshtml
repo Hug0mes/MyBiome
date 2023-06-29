@@ -1,0 +1,52 @@
+﻿@model List<Category>
+
+<div class="page-heading bg-light">
+
+    <div class="container">
+        <div class="row align-items-end text-center">
+            <div class="col-lg-7 mx-auto">
+                <h1>Categories</h1>
+                <p class="mb-4"><a asp-controller="Home" asp-action="index">Home</a> / <strong>Categories</strong></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <br />
+<div class="container">
+    <div class="row mb-4">
+        @if (Model.Count > 0)
+        {
+            @foreach (var category in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <img style="width: auto; height: 190px; object-fit: cover; max-width: 100%;" src="@ImageHelper.GetImageLink(category.Image, "categories")" class="card-img-top" alt="Produto" asp-append-version="true">
+                   
+                    <h4 style=""><span>@category.Name</span></h4>
+
+                    @if (category.SubCategories != null && category.SubCategories.Count > 0)
+                    {
+                        <div class="card-body">
+                            @foreach (var subCategory in category.SubCategories)
+                            {
+                                <p class="card-title">@subCategory.Name</p>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-12">
+                            <p>No subcategories available.</p>
+                        </div>
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-md-12">
+                <p>No categories available.</p>
+            </div>
+        }
+    </div>
+</div>

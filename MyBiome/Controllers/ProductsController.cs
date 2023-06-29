@@ -41,9 +41,6 @@ namespace MyBiome.Controllers
         // GET: Products1
         public IActionResult ListProducts()
         {
-
-
-
             List<Products> products = _context.Products.Include(p => p.SubCategory).Where(p => p.Status == "Active").ToList();
             List<Category> categories = _context.Categories.ToList();
 
@@ -57,6 +54,18 @@ namespace MyBiome.Controllers
                 //favorites = favorites
             };
             return View(viewModel);
+        }
+
+        public IActionResult Category()
+        {
+
+            //List<SubCategory> subCategories = _context.SubCategories
+            //    .Include(t => t.Category)
+            //    .ToList();
+
+            List<Category> categories = _context.Categories.Include(c => c.SubCategories).ToList();
+
+            return View(categories);
         }
 
         // GET: Products/Details/5

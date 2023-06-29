@@ -79,6 +79,7 @@
 						<li class="has-children">
 							<a asp-controller="products" asp-action="ListProducts">Shop</a>
 							<ul class="dropdown">
+								<li><a asp-controller="products" asp-action="Category">Categories</a></li>
 								<li><a asp-controller="products" asp-action="ListProducts">Se all</a></li>
 							
 							</ul>
@@ -233,7 +234,7 @@
 		function imageClicked() {
 			clickCount++;
 
-			if (clickCount === 10) {
+			if (clickCount === 9) {
 				window.location.href = "Home/cofcof";
 			}
 		}

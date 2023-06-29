@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\2005h\Desktop\Git_Projects\MyBiome\MyBiome\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2023-06-01T10:55:20.4908052Z;</History>
+    <History>True|2023-06-29T13:10:15.5978297Z;True|2023-06-29T14:05:47.4043308+01:00;True|2023-06-29T13:46:38.2245397+01:00;True|2023-06-01T11:55:20.4908052+01:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

@@ -57,7 +57,7 @@
                                         <div class="input-group-prepend">
                                             <a asp-action="Decrease" asp-route-id="@item.ProductId" class="btn btn-outline-black js-btn-minus">-</a>
                                         </div>
-                                        <input type="text" class="form-control text-center" value="@item.Quantity" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                        <input type="text" class="form-control text-center" value="@item.Quantity" max="@item." placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                         <div class="input-group-append">
                                             <a  asp-action="add" asp-route-id="@item.ProductId" class="btn btn-outline-black js-btn-plus">+</a>
                                         </div>
@@ -121,12 +121,22 @@
                         </div>
 
                         <div class="row">
+                               @if (Model.CartItems.Count > 0)
+        {
                             <div class="col-md-12">
                                  <form  asp-action="Checkout" method="post">
                                 <input type="hidden" name="id" />
                                 <button type="submit" class="btn btn-black btn-lg py-3 btn-block" >Proceed To Checkout</button>
                              </form>
-                             </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-md-12">
+                                  
+                                        
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
