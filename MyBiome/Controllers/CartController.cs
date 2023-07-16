@@ -51,7 +51,8 @@ namespace MyBiome.Controllers
 
 			List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart") ?? new List<CartItem>();
 
-            CartItem cartItem = cart.Where(c => c.ProductId == id).FirstOrDefault();
+            CartItem cartItem = cart.FirstOrDefault(c => c.ProductId == id);
+           
 
             if (cartItem == null)
             {

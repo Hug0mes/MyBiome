@@ -23,7 +23,7 @@
                     <h5 class="card-title">@product.Name</h5>
                     <p class="card-text">  @product.Price € </p>
                     <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary">View Product</a>
-                    <a asp-action="remove" asp-route-id="@product.Id" class="btn btn-danger">Remove</a>
+                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Remove</a>
                 
                 </div>
             </div>

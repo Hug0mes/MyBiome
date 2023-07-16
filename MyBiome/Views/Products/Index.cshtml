@@ -58,7 +58,7 @@
                         <td>
                             <img class="rounded" src="@ImageHelper.GetImageLink(product.Image1, "products")" height="70" width="auto" asp-append-version="true" />
                         </td>
-                        <td>@product.Price</td>
+                        <td>@product.Price €</td>
                         <td>@product.Height x @product.Whidh</td>
                         <td>@product.Stock</td>
                         <td>@product.SubCategory?.Category?.Name</td>
@@ -67,7 +67,14 @@
                         <td>
                             <a class="btn btn-primary" asp-action="Details" asp-route-id="@product.Id">Details</a>
                             <a class="btn btn-primary" asp-action="Edit" asp-route-id="@product.Id">Edit</a>
-                            <a class="btn btn-danger" asp-controller="Products" asp-action="Delete" asp-route-id="@product.Id">Delete</a>
+
+                            @if(product.Status =="Inactive"){
+
+                                  <a class="btn btn-primary" asp-controller="Products" asp-action="Active" asp-route-id="@product.Id">Active</a>
+                            }else{
+                                  <a class="btn btn-danger" asp-controller="Products" asp-action="Delete" asp-route-id="@product.Id">Delete</a>
+                            }
+                          
                         </td>
                     </tr>
                 }

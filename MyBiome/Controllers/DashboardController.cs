@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyBiome.Infrastructure;
 using MyBiome.Models;
+using NToastNotify;
 using System.Linq;
 using System.Security.Claims;
 
@@ -79,16 +80,33 @@ namespace MyBiome.Controllers
             // Envia a lista de favoritos para a view
             return View(favoriteProducts);
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Remove(int id)
+        // GET: Dashboard/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var favorite = await _context.Favorites
-                .FirstOrDefaultAsync(f => f.CostumerId == userId && f.ProductId == id);
+                .Where(t => t.CostumerId == userId)
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+            if (favorite == null)
+            {
+                return NotFound();
+            }
 
+            return View(favorite);
+        }
+
+        // POST: Dashboard/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var favorite = await _context.Favorites.FindAsync(id);
             if (favorite == null)
             {
                 return NotFound();
@@ -96,11 +114,10 @@ namespace MyBiome.Controllers
 
             _context.Favorites.Remove(favorite);
             await _context.SaveChangesAsync();
-
             return RedirectToAction("favorites", "Dashboard");
         }
-   
-    public IActionResult Orders()
+
+        public IActionResult Orders()
         {
             return View();
         }

@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Dashboard/_Layout.cshtml";
+   
 }
 <h1>User Roles</h1>
 <table class="table table-striped">
@@ -19,8 +20,15 @@
     <tbody>
         @foreach (var user in Model)
         {
-            <tr>
-                @*<td>@user.FirstName</td>
+            @if (user.Email.ToString() == @Context.User.Identity.Name.ToString())
+            {
+
+            }
+            else
+            {
+
+                <tr>
+                    @*<td>@user.FirstName</td>
                 <td>@user.LastName</td>*@
                 <td>@user.UserId</td>
                 <td>@user.Email</td>
@@ -29,6 +37,7 @@
                     <a class="btn btn-primary" asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
                 </td>
             </tr>
+            }
         }
     </tbody>
 </table>

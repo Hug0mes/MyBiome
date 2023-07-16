@@ -86,5 +86,102 @@ namespace MyBiome.Controllers
         }
 
 
+        // GET: SubCategory/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var subCategory = await _context.SubCategories
+                .Include(s => s.Category)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (subCategory == null)
+            {
+                return NotFound();
+            }
+
+            return View(subCategory);
+        }
+
+        // POST: SubCategory/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var subCategory = await _context.SubCategories.FindAsync(id);
+            if (subCategory == null)
+            {
+                return NotFound();
+            }
+
+            _context.SubCategories.Remove(subCategory);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
+        // GET: SubCategory/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var subCategory = await _context.SubCategories.FindAsync(id);
+            if (subCategory == null)
+            {
+                return NotFound();
+            }
+
+            // Se necessário, você pode popular uma lista de categorias para exibir no formulário de edição
+            ViewBag.Categories = await _context.Categories.ToListAsync();
+
+            return View(subCategory);
+        }
+
+        // POST: SubCategory/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, SubCategory subCategory)
+        {
+            if (id != subCategory.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(subCategory);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!SubCategoryExists(subCategory.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Index", "Home");
+            }
+
+           
+             ViewBag.Categories = await _context.Categories.ToListAsync();
+
+            return View(subCategory);
+        }
+
+        private bool SubCategoryExists(int id)
+        {
+            return _context.SubCategories.Any(e => e.Id == id);
+        }
+
     }
 }

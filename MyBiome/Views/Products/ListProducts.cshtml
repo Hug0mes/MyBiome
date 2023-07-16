@@ -40,11 +40,11 @@
                     <strong class="mr-3">Sort by:</strong>
                     <form asp-action="ListProductsFilter" method="post">
                         <select name="sortoption" required onchange="this.form.submit()">
-                            <option value="1">Newest Items</option>
-                            <option value="2">Best Selling</option>
-                            <option value="3">Price: Ascending</option>
-                            <option value="4">Price: Descending</option>
-                            <option value="5">Rating(High to Low)</option>
+                            <option value="1">Select</option>
+                            <option value="2">Price: Ascending</option>
+                            <option value="3">Price: Descending</option>
+                            <option value="4">Name: Ascending</option>
+                            <option value="5">Name: Descending</option>
                         </select>
                     </form>
                 </div>
@@ -61,7 +61,7 @@
                             @foreach (var category in Model.Categories)
                             {
 
-                            <li><a asp-controller="Category" asp-action="edit" asp-route-id="@category.Id"> @category.Name <span> @*numbrrs*@ </span></a></li>
+                            <li><a asp-controller="Category" asp-action="details" asp-route-id="@category.Id"> @category.Name <span> @*numbrrs*@ </span></a></li>
                               
                             }
                         }

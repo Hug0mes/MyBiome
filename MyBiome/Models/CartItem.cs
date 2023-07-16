@@ -12,6 +12,8 @@ namespace MyBiome.Models
                 public string ProductName { get; set; }
                 public int Quantity { get; set; }
                 public decimal Price { get; set; }
+                public int Stock { get; set; }
+
                 public decimal Total
                 {
                         get { return Quantity * Price; }
@@ -29,6 +31,7 @@ namespace MyBiome.Models
                         ProductName = product.Name;
                         Price = product.Price;
                         Quantity = 1;
+                        Stock = product.Stock;
                         Image = product.Image1;
         }
 

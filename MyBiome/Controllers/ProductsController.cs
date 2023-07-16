@@ -221,7 +221,19 @@ namespace MyBiome.Controllers
                 product.Status = "Inactive";
                 _context.SaveChanges();
             }
+            _toastNotification.AddAlertToastMessage($"status changed to inactive ");
+            return RedirectToAction("Index"); // Redireciona para a página principal ou ação desejada após a inativação do produto
+        }
 
+        public IActionResult Active(int id)
+        {
+            var product = _context.Products.Find(id);
+            if (product != null)
+            {
+                product.Status = "Active";
+                _context.SaveChanges();
+            }
+            _toastNotification.AddSuccessToastMessage($"status changed to Active ");
             return RedirectToAction("Index"); // Redireciona para a página principal ou ação desejada após a inativação do produto
         }
 
@@ -375,8 +387,8 @@ namespace MyBiome.Controllers
             // Aplique a lógica de filtragem com base no valor de SortOption
             if (sortoption == 1)
             {
-                // Ordenar por melhores vendas
-                productsList = productsList.OrderByDescending(p => p.Stock).ToList();
+                // Ordenar por Newst Items
+                productsList = productsList.ToList();
             }
             else if (sortoption == 2)
             {
@@ -391,12 +403,12 @@ namespace MyBiome.Controllers
             else if (sortoption == 4)
             {
                 // Ordenar por classificação alta para baixa
-                productsList = productsList.ToList();
+                productsList = productsList.OrderBy(p => p.Name).ToList();
             }
             else
             {
                 // Ordenar por itens mais recentes (opção padrão)
-                productsList = productsList.ToList();
+                productsList = productsList.OrderByDescending(p => p.Name).ToList();
             }
 
             // Outras lógicas relevantes...

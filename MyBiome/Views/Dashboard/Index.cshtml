@@ -18,7 +18,7 @@
     <div class="row g-4">
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <i class="fa fa-paper-plane fa-3x text-primary"></i>
                 <div class="ms-3">
                     <p class="mb-2">Total purchases</p>
                     <h6 class="mb-0">@ViewBag.TotalPurchases</h6>
@@ -27,7 +27,7 @@
         </div>
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                <i class="fa fa-credit-card fa-3x text-primary"></i>
                 <div class="ms-3">
                     <p class="mb-2">Average spent </p>
                     <h6 class="mb-0">@ViewBag.AveragePurchases €</h6>
@@ -36,7 +36,7 @@
         </div>
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                <i class="fa fa-globe fa-3x text-primary" aria-hidden="true"></i>
                 <div class="ms-3">
                     <p class="mb-2">O2 saved</p>
                     <h6 class="mb-0"> @ViewBag.O2saved g </h6>
@@ -45,14 +45,31 @@
         </div>
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                <i class="fa fa-leaf fa-3x text-primary" aria-hidden="true"></i>
                 <div class="ms-3">
                     <p class="mb-2">Total Plants</p>
                     <h6 class="mb-0"> @ViewBag.TotalPlants </h6>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
-<!-- Sale & Revenue End -->
-
+<!-- Sale & Revenue End --><div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>What you can do on your dashboard:</h4>
+            <ul>
+                <li>See your orders</li>
+                <li>See your favorites</li>
+                <li>See how much oxygen you saved</li>
+                <li>Change your password</li>
+                <li>get a better view of what you've already spent</li>
+            </ul>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="~/images/minimal-aesthetic-plant-leaf-free-png.png" height="300px" width="300px" alt="Imagem" class="img-fluid">
+        </div>
+    </div>
+</div>

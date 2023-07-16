@@ -55,8 +55,13 @@ namespace MyBiome.Infrastructure
         {
             if (!context.Products.Any())
             {
-                Category Plants = new Category { Name = "Plants", Image = "cloth_1.jpg" };
+                Category Plants = new Category { Name = "Plants", Image = "PlantsCategory.jpg" };
+                Category Seeds = new Category { Name = "Seeds", Image = "Seeds.jpg" };
+                Category GardenItems = new Category { Name = "Garden Items", Image = "GardenTolls.jpg" };
+
                 SubCategory rose = new SubCategory { Name = "Rose", Category = Plants, };
+                SubCategory seed2 = new SubCategory { Name = "Small", Category = Seeds, };
+                SubCategory seed3 = new SubCategory { Name = "Big", Category = GardenItems, };
 
 
                 for (int i = 1; i <= 10; i++)
@@ -66,14 +71,14 @@ namespace MyBiome.Infrastructure
                     {
                         Name = "Ficus Lyrata Plant " + i.ToString(),
                         Description = "This is a popular and stylish indoor plant with large, shiny leaves shaped like a violin. The plant has an average height of 1 meter and is native to West Africa. The Ficus Lyrata is an easy-to-care-for plant, and is an excellent choice for anyone looking to add a tropical and exotic plant to their home.",
-                        Price = 2*i,
+                        Price = 100+(i*i),
                         Status = "Active",
                         Height = "30",
                         Whidh = "10",
-                        Stock = "5",
+                        Stock = 5,
                         Image1 = "repeat.png",
-                        Image2 = "repeat.png",
-                        Image3 = "sock-1-min.jpg",
+                        Image2 = "1_plant.png",
+                        Image3 = "repeat.png",
                         SubCategory = rose
                     };
 
